@@ -1,0 +1,57 @@
+import { Box, Container, Grid, Link, Stack, Typography } from '@mui/material';
+
+const footerLinks = {
+  Product: ['Platform overview', 'Mobile app', 'Analytics', 'Compliance'],
+  Company: ['About', 'Careers', 'Partners', 'News'],
+  Resources: ['Guides', 'Safety academy', 'Events', 'Support'],
+};
+
+function Footer() {
+  return (
+    <Box component="footer" sx={{ py: 8, bgcolor: 'grey.900', color: 'grey.100' }}>
+      <Container maxWidth="lg">
+        <Grid container spacing={{ xs: 6, md: 10 }}>
+          <Grid item xs={12} md={4}>
+            <Stack spacing={2}>
+              <Typography variant="h5">Arbill</Typography>
+              <Typography variant="body2" sx={{ color: 'grey.400' }}>
+                Integrated safety solutions that align your people, processes, and protection.
+              </Typography>
+              <Typography variant="body2" sx={{ color: 'grey.500' }}>
+                © {new Date().getFullYear()} Arbill Industries, Inc. All rights reserved.
+              </Typography>
+            </Stack>
+          </Grid>
+          <Grid item xs={12} md={8}>
+            <Grid container spacing={4}>
+              {Object.entries(footerLinks).map(([section, links]) => (
+                <Grid item xs={12} sm={4} key={section}>
+                  <Stack spacing={2} alignItems="flex-start">
+                    <Typography variant="subtitle2" sx={{ color: 'grey.300', letterSpacing: 2 }}>
+                      {section}
+                    </Typography>
+                    <Stack spacing={1.5}>
+                      {links.map((label) => (
+                        <Link
+                          key={label}
+                          underline="hover"
+                          color="inherit"
+                          href="#"
+                          sx={{ color: 'grey.400' }}
+                        >
+                          {label}
+                        </Link>
+                      ))}
+                    </Stack>
+                  </Stack>
+                </Grid>
+              ))}
+            </Grid>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  );
+}
+
+export default Footer;
