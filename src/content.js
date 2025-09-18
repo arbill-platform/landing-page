@@ -319,10 +319,61 @@ export const faqs = [
   },
 ];
 
-export const contactDetails = {
-  phone: '1-800-ARBILL',
-  email: 'hello@arbill.com',
-  address: '1845 Walnut Street, Philadelphia, PA 19103',
-  responseTime: 'We respond to demo requests within one business day.',
-  officeHours: 'Monday – Friday, 8 AM – 6 PM EST',
+export const contactContent = {
+  hero: {
+    kicker: 'Contact Arbill',
+    title: 'Let’s shape safer, smarter projects together',
+    subtitle:
+      'Reach our specialists, share your goals, and discover how Arbill empowers project owners and investors to deliver with confidence.',
+  },
+  addressBook: {
+    heading: 'Your address book',
+    cards: [
+      {
+        title: 'General inquiries',
+        email: 'hello@arbill.com',
+        description: 'Questions about our platform, services, or partnership opportunities.',
+      },
+      {
+        title: 'Project owner support',
+        email: 'projects@arbill.com',
+        description: 'Active projects, onboarding requests, and field enablement assistance.',
+      },
+      {
+        title: 'Investor relations',
+        email: 'investors@arbill.com',
+        description: 'Portfolio strategy, ESG reporting, and governance collaboration.',
+      },
+    ],
+  },
+  form: {
+    heading: 'Tell us about your goals',
+    description: 'Share a few details and we’ll connect you with the right Arbill specialist within one business day.',
+  },
+  community: {
+    heading: 'Join the community',
+    subheading: 'Tap into insights, conversations, and live sessions with the Arbill team.',
+    channels: [
+      {
+        title: 'Telegram',
+        description: 'Real-time updates and Q&A with safety strategists.',
+        link: 'https://t.me/arbill',
+      },
+      {
+        title: 'YouTube Channel',
+        description: 'Workshops, platform walkthroughs, and customer stories.',
+        link: 'https://youtube.com/@arbill',
+      },
+      {
+        title: 'Facebook Fanpage',
+        description: 'Community highlights, event recaps, and best practices.',
+        link: 'https://facebook.com/arbill',
+      },
+      {
+        title: 'LinkedIn',
+        description: 'Industry trends, leadership insights, and partnerships.',
+        link: 'https://linkedin.com/company/arbill',
+      },
+    ],
+  },
 };
