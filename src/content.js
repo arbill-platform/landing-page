@@ -114,58 +114,171 @@ export const metrics = [
 ];
 
 export const aboutContent = {
-  mission:
-    'We combine predictive technology, safety gear expertise, and trusted advisors to keep frontline teams protected and productive.',
-  story:
-    'For more than 75 years, Arbill has partnered with industrial organizations to reduce workplace incidents. Today, our connected platform delivers the same mission with modern analytics and automated workflows.',
-  values: [
+  hero: {
+    kicker: 'About Arbill',
+    title: 'Generations of safety leadership, powered by innovation',
+    subtitle:
+      'We help organizations protect their people, accelerate performance, and invest with confidence through a unified safety ecosystem.',
+    backgroundImage:
+      'linear-gradient(115deg, rgba(0, 109, 119, 0.7), rgba(6, 214, 160, 0.5)), url("https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?auto=format&fit=crop&w=1600&q=80")',
+  },
+  highlights: [
     {
-      title: 'People First',
-      description: 'Every product and feature is built to safeguard the workers who power essential industries.',
+      title: 'People first',
+      description: 'We design every experience to protect frontline teams and empower the leaders who support them.',
+      icon: 'SafetyCheck',
     },
     {
-      title: 'Proven Expertise',
-      description: 'Certified safety professionals guide each implementation to ensure measurable results.',
+      title: 'Trusted partnerships',
+      description: 'Our advisors operate as an extension of your organization from planning through execution.',
+      icon: 'Handshake',
     },
     {
-      title: 'Continuous Improvement',
-      description: 'We analyze millions of datapoints to identify trends and proactively prevent incidents.',
-    },
-  ],
-  timeline: [
-    {
-      year: '1945',
-      milestone: 'Arbill founded to supply critical protective equipment to local manufacturers.',
+      title: 'Data-driven insight',
+      description: 'Real-time analytics and predictive models help you act fast and stay ahead of risk.',
+      icon: 'Insights',
     },
     {
-      year: '2001',
-      milestone: 'Launch of our safety advisory practice supporting nationwide compliance programs.',
-    },
-    {
-      year: '2023',
-      milestone: 'Introduction of the Arbill Safety Intelligence Platform uniting data, workflows, and PPE.',
+      title: 'Sustainable impact',
+      description: 'We align people, process, and product strategies to deliver lasting value for stakeholders.',
+      icon: 'AutoGraph',
     },
   ],
+  story: {
+    heading: 'Our story',
+    paragraphs: [
+      'Arbill began in 1945 supplying essential protective equipment to the manufacturers who powered American industry. As technology, regulations, and expectations evolved, so did we.',
+      'Today, we bring together predictive software, national safety expertise, and a robust supply network to help ambitious organizations deliver safer, smarter projects.',
+    ],
+    mission: {
+      title: 'Mission',
+      description: 'Equip every workforce with the insight, equipment, and support they need to go home safe and proud.',
+    },
+    vision: {
+      title: 'Vision',
+      description: 'Build the most trusted safety ecosystem where project owners, investors, and teams collaborate to create lasting impact.',
+    },
+    image:
+      'url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80")',
+  },
+  beliefs: [
+    {
+      title: 'Innovation with purpose',
+      description: 'We explore new ideas that make safety programs more intuitive, predictive, and resilient.',
+      icon: 'Lightbulb',
+    },
+    {
+      title: 'Accountability in action',
+      description: 'Transparent reporting and shared KPIs keep everyone aligned on outcomes.',
+      icon: 'FactCheck',
+    },
+    {
+      title: 'Inclusive collaboration',
+      description: 'We unite owners, investors, and frontline teams around shared success.',
+      icon: 'Diversity3',
+    },
+    {
+      title: 'Sustained guardianship',
+      description: 'Our guidance extends beyond launch with continuous coaching and dedicated support.',
+      icon: 'VolunteerActivism',
+    },
+  ],
+  journey: [
+    { year: '1945', milestone: 'Arbill founded to supply critical protective equipment to local manufacturers.' },
+    { year: '1978', milestone: 'Expanded nationwide distribution with dedicated safety specialists in every region.' },
+    { year: '2001', milestone: 'Launched our safety advisory practice supporting compliance and training programs.' },
+    { year: '2015', milestone: 'Introduced connected safety services integrating data, gear, and field support.' },
+    { year: '2023', milestone: 'Unveiled the Arbill Safety Intelligence Platform for predictive insights and automation.' },
+  ],
+  quote: {
+    text: 'Safety is the most human investment you can make. When people feel protected and empowered, performance follows.',
+    author: 'Julie Copeland',
+    role: 'CEO, Arbill',
+  },
 };
 
-export const howItWorksSteps = [
-  {
-    title: 'Discover & Benchmark',
-    description: 'We evaluate your current processes, compliance requirements, and incident history to set a data-backed baseline.',
+export const howItWorksContent = {
+  hero: {
+    kicker: 'How it works',
+    title: 'A coordinated path from insight to execution',
+    subtitle:
+      'We align project owners and investors around shared goals, orchestrating the people, processes, and protections needed to deliver measurable outcomes.',
   },
-  {
-    title: 'Digitize Workflows',
-    description: 'Configure inspections, corrective actions, and training pathways tailored to your facilities and teams.',
+  processes: {
+    heading: 'Operational excellence for every stakeholder',
+    subheading:
+      'Project owners and investors collaborate through synchronized journeys tailored to their objectives.',
+    owner: {
+      title: 'Project Owner Process',
+      steps: [
+        {
+          title: 'Scope & Alignment',
+          description: 'Define safety benchmarks, resource needs, and compliance requirements across sites and partners.',
+        },
+        {
+          title: 'Workflow Activation',
+          description: 'Digitize inspections, corrective actions, and gear fulfilment to empower teams in the field.',
+        },
+        {
+          title: 'Performance Optimization',
+          description: 'Monitor dashboards, address emerging risks, and refine programs with Arbill advisors.',
+        },
+      ],
+    },
+    investor: {
+      title: 'Investor Process',
+      steps: [
+        {
+          title: 'Portfolio Diagnostics',
+          description: 'Assess ESG posture, risk exposure, and capital plans with a unified data review.',
+        },
+        {
+          title: 'Governance Enablement',
+          description: 'Implement standardized reporting, escalation paths, and partner expectations.',
+        },
+        {
+          title: 'Impact Reporting',
+          description: 'Benchmark performance, surface opportunities, and communicate outcomes to stakeholders.',
+        },
+      ],
+    },
   },
-  {
-    title: 'Predict & Act',
-    description: 'AI-powered dashboards surface emerging risks, automate alerts, and connect teams with the right protective gear.',
+  highlight: {
+    heading: 'Why Arbill delivers results',
+    subheading: 'Our connected ecosystem keeps owners and investors aligned, informed, and ready to act.',
+    pillars: [
+      {
+        title: 'Connected intelligence',
+        description: 'Real-time data across projects and portfolios for confident decisions.',
+        icon: 'Lan',
+      },
+      {
+        title: 'Predictive governance',
+        description: 'Automation and alerts that surface risk before it impacts your goals.',
+        icon: 'ManageHistory',
+      },
+      {
+        title: 'Integrated enablement',
+        description: 'Training, procurement, and advisory services unified under one roof.',
+        icon: 'Hub',
+      },
+      {
+        title: 'Continuous partnership',
+        description: 'Dedicated specialists driving progress long after launch.',
+        icon: 'Handshake',
+      },
+    ],
   },
-  {
-    title: 'Elevate Outcomes',
-    description: 'Measure impact with executive-ready reporting and continuous coaching from Arbill safety advisors.',
+  quote: {
+    text: 'Safety performance is a shared journey. When owners and investors align, every project becomes a catalyst for sustainable growth.',
+    author: 'Michael Davis',
+    role: 'Chief Strategy Officer, Arbill',
+    ctas: [
+      { label: 'Partner as a Project Owner', to: '/contact?audience=owner' },
+      { label: 'Partner as an Investor', to: '/contact?audience=investor' },
+    ],
   },
-];
+};
 
 export const solutionHighlights = [
   {
