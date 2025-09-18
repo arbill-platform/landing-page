@@ -21,9 +21,9 @@ function HeroBanner({ hero }) {
       <Box sx={{ position: 'absolute', inset: 0, bgcolor: 'rgba(10, 21, 40, 0.35)' }} />
       <Container maxWidth="lg" sx={{ position: 'relative', py: { xs: 12, md: 16 } }}>
         <Stack spacing={4} sx={{ maxWidth: 640 }}>
-          <Typography variant="overline" sx={{ letterSpacing: 3, fontSize: 14, opacity: 0.9 }}>
+          {/* <Typography variant="overline" sx={{ letterSpacing: 3, fontSize: 14, opacity: 0.9 }}>
             Partner with confidence
-          </Typography>
+          </Typography> */}
           <Typography variant="h1" sx={{ fontSize: { xs: '2.75rem', md: '3.6rem' }, fontWeight: 700, lineHeight: 1.1 }}>
             {hero.title}
           </Typography>

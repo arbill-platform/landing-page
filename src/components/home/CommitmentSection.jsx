@@ -14,6 +14,12 @@ function CommitmentSection({ content }) {
   return (
     <Box component="section" sx={{ py: { xs: 10, md: 14 }, bgcolor: 'background.default' }}>
       <Container maxWidth="lg">
+        <Stack spacing={3} textAlign="center" sx={{ mb: 6 }}>
+          <Typography variant="overline" sx={{ letterSpacing: 3, color: 'primary.main' }}>
+            Our commitment
+          </Typography>
+          <Typography variant="h3">{content.tagline}</Typography>
+        </Stack>
         <Box
           sx={{
             display: 'grid',
@@ -22,9 +28,7 @@ function CommitmentSection({ content }) {
           }}
         >
           <Stack spacing={2}>
-            <Typography variant="overline" sx={{ letterSpacing: 3, color: 'primary.main' }}>
-              {content.heading}
-            </Typography>
+            
             <Stack spacing={2}>
               {content.values.map(({ title, description }) => (
                 <Accordion key={title} disableGutters>

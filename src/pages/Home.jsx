@@ -7,7 +7,7 @@ import SpotlightSection from '../components/home/SpotlightSection.jsx';
 import {
   homeHero,
   whoWeAreContent,
-  homeWorkSteps,
+  homeHowItWorkSteps,
   joinAudienceContent,
   commitmentContent,
   spotlightContent,
@@ -17,8 +17,8 @@ function Home() {
   return (
     <>
       <HeroBanner hero={homeHero} />
-      <WhoWeAreSection content={whoWeAreContent} />
-      <HomeHowItWorks steps={homeWorkSteps} />
+      <WhoWeAreSection content={whoWeAreContent} />      
+      <HomeHowItWorks content={homeHowItWorkSteps} />
       <JoinSection content={joinAudienceContent} />
       <CommitmentSection content={commitmentContent} />
       <SpotlightSection content={spotlightContent} />

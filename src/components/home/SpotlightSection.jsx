@@ -18,15 +18,12 @@ function SpotlightSection({ content }) {
           }}
         >
           <Stack spacing={3} alignItems="center">
-            <Typography variant="overline" sx={{ letterSpacing: 4, opacity: 0.85 }}>
-              Spotlight
-            </Typography>
             <Typography variant="h3">{content.heading}</Typography>
             <Typography variant="body1" sx={{ maxWidth: 620, opacity: 0.9 }}>
               {content.description}
             </Typography>
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
-              <Button component={RouterLink} to={content.primaryCta.to} variant="contained" size="large" color="inherit">
+              <Button component={RouterLink} to={content.primaryCta.to} variant="contained" size="large" color="inherit" sx={{ color: 'primary.main' }}>
                 {content.primaryCta.label}
               </Button>
               <Button component={RouterLink} to={content.secondaryCta.to} variant="outlined" size="large" color="inherit">

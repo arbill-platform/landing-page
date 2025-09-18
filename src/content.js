@@ -6,32 +6,34 @@ export const navigationItems = [
 ];
 
 export const homeHero = {
-  title: 'Build safer, smarter projects with trusted partners',
+  title: 'Arbill Platform - Connecting Projects and Investors Globally',
   subtitle:
-    'Arbill connects visionary project owners and investors with the insights, resources, and safety expertise needed to deliver impact at scale.',
+    'Since 2020, Arbill provided a trusted investment platform where Project Owners secure funding and Investors discover opportunities with crypto-powered transparency and secure contracts.',
   backgroundImage:
     'linear-gradient(120deg, rgba(0, 109, 119, 0.65), rgba(6, 214, 160, 0.55)), url("https://images.unsplash.com/photo-1529429617124-aee0113a1a7b?auto=format&fit=crop&w=1600&q=80")',
   ctas: [
-    { label: 'For Project Owner', to: '/contact?audience=owner' },
-    { label: 'For Investor', to: '/contact?audience=investor' },
+    { label: 'For Project Owner', to: 'https://docs.google.com/forms/d/e/1FAIpQLSedYXivZ4dGUGllDSq7BrsMPaAq_skAGRZE37mJpMrfXHW6DA/viewform?usp=sharing&ouid=116642674041425281083' },
+    { label: 'For Investor', to: 'https://app.arbill.co' },
   ],
 };
 
 export const whoWeAreContent = {
   heading: 'Who we are',
-  tagline: 'A trusted partner delivering outcomes from planning to protection.',
+  tagline: 'A trusted bridge between projects and investors.',
   description:
-    'For over 75 years, Arbill has combined safety innovation, strategic advisory services, and curated product sourcing to power ambitious projects. We collaborate with owners and investors to mitigate risk, accelerate decision-making, and keep frontline teams protected.',
+    'Arbill is an international investment platform that bridges visionaries and investors. We specialize in facilitating secure investment contracts and managing fund flows with cryptocurrency. Since April 2020, we have committed to building a sustainable ecosystem where opportunities are transparent and trustworthy.',
   bullets: [
-    'Safety intelligence platform with predictive insights',
-    'Nationwide network of certified safety advisors',
-    'Integrated procurement for compliant PPE and gear',
+    'Responsible Screening: Every project is carefully reviewed to protect investors and support only credible opportunities.',
+    'Transparent Fund Flow: Blockchain-backed processes ensure every transaction is visible, accountable, and secure.',
+    'Sustainable Growth: We prioritize long-term value for both investors and project owners, not short-term gains.',
   ],
   image:
     'url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=80")',
 };
 
-export const homeWorkSteps = [
+export const homeHowItWorkSteps = {
+  tagline: 'Clear steps to connect ideas with capital.',
+  steps: [
   {
     title: 'Align goals & benchmarks',
     description:
@@ -47,62 +49,67 @@ export const homeWorkSteps = [
     description:
       'Track performance with real-time dashboards, benchmark across assets, and evolve programs with guidance from Arbill experts.',
   },
-];
+]};
 
 export const joinAudienceContent = {
-  heading: 'Who can join Arbill',
+  tagline: 'Opportunities for both visionaries and investors worldwide.',
   owner: {
     title: 'Project Owners',
     description:
-      'Bring your projects online faster with compliance assurance, vetted suppliers, and proactive risk controls built into every phase.',
+      'Gain access to global investors and raise funds with confidence.',
     highlights: [
-      'Centralized oversight across contractors and sites',
-      'Transparent budget tracking tied to safety performance',
-      'On-demand access to certified safety professionals',
+      'Access investors worldwide without borders.',
+      'Guidance on milestones, reporting, and responsible fund use.',
+      'Listing on a platform that values trust and transparency.',
     ],
+    cta: { label: 'Submit Your Project', to: 'https://docs.google.com/forms/d/e/1FAIpQLSedYXivZ4dGUGllDSq7BrsMPaAq_skAGRZE37mJpMrfXHW6DA/viewform?usp=sharing&ouid=116642674041425281083' },
   },
   investor: {
     title: 'Investors',
     description:
-      'Protect capital and accelerate returns with comprehensive ESG reporting, risk analytics, and field intelligence.',
+      'Explore vetted projects and invest with secure crypto transactions.',
     highlights: [
-      'Portfolio-wide visibility into leading indicators',
-      'Standardized due diligence and compliance workflows',
-      'Data-backed insights for stakeholders and boards',
+      'Invest only in carefully reviewed projects.',
+      'Track your investments with blockchain-backed reporting.',
+      'Earn reasonable income with safeguards against extreme risks.',
     ],
+    cta: { label: 'Start Investing', to: 'https://app.arbill.co' },
+  
   },
+  
 };
 
 export const commitmentContent = {
   heading: 'Our commitment',
   values: [
     {
-      title: 'Safety first',
-      description: 'Every recommendation centres on protecting people and preventing incidents before they happen.',
+      title: 'Half Decade Serving',
+      description: 'Arbill was found in April 2020. Despite market fluctuations and challenges, we have maintained continuous service to our community, providing resilience and long-term dedication.',
     },
     {
-      title: 'Partnership mindset',
-      description: 'We operate as an extension of your team, aligning strategies, resources, and accountability.',
+      title: 'Security First',
+      description: 'Every investment is supported by secure digital contracts and managed through blockchain-enabled fund flows. We ensure that investors and project owners operate in a transparent and safe environment.',
     },
     {
-      title: 'Operational clarity',
-      description: 'Real-time dashboards and reporting keep every stakeholder focused on what matters most.',
+      title: 'Global Network',
+      description: 'Arbill Platform connects Project Owners and Investors worldwide, making opportunities accessible beyond borders. Our platform is designed for international users who accept cryptocurrency as the medium of exchange.',
     },
     {
-      title: 'Continuous innovation',
-      description: 'We constantly refine our technology, analytics, and supply partners to meet evolving demands.',
+      title: 'Sustainable Commitment',
+      description: 'Our goal is not high risk - high return growth but building a sustainable ecosystem. We focus on transparency, trust, and responsibility to ensure the long-term success of both projects and investors.',
     },
   ],
   narrative: [
-    'Arbill is committed to building environments where people, projects, and investments thrive together. Our teams blend decades of experience with modern technology to anticipate challenges and unlock opportunities.',
-    'From the jobsite to the boardroom, we cultivate trust through transparency, measurable performance, and steadfast support.',
+    'Since its establishment in April 2020, Arbill Platform has been dedicated to creating a secure and transparent environment for global investment. We recognize that trust is the foundation of every financial relationship, and therefore, our platform is built to provide reliability from the very first interaction. By combining blockchain technology with carefully structured investment contracts, Arbill ensures that every transaction is traceable, accountable, and fair to both Project Owner and Investors.',
+    'Over the years, we have navigated market changes and global challenges, yet Arbill Platform continues to stand as a reliable partner. This consistency demonstrates our resilience and commitment to long-term service rather than short-term gains. With a global network of users, we aim to make investment opportunities accessible across borders, bridging ideas with resources is a seamless manner.',
+    'Our mission goes beyond connecting parties - we are building a sustainable ecosystem where projects can grow responsibly and investors can place their trust with confidence. Transparency, security, and accountability remain our guiding principles, ensuring that every participants feels supported and protected when they choose Arbill Platform.'
   ],
 };
 
 export const spotlightContent = {
-  heading: 'Let’s deliver your next milestone',
+  heading: 'Join the Arbill Network Today',
   description:
-    'Whether you are launching a new development or scaling an investment portfolio, Arbill ensures every step is grounded in safety, insight, and execution.',
+    'Whether you are a Project Owner or an Investor, Arbill Platform is your partner in building sustainable opportunities.',
   primaryCta: { label: 'Start your project', to: '/contact?audience=owner' },
   secondaryCta: { label: 'Invest with confidence', to: '/contact?audience=investor' },
 };

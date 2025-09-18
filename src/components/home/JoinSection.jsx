@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import { Box, Container, List, ListItem, ListItemIcon, ListItemText, Paper, Stack, Typography } from '@mui/material';
+import { Box, Button, Container, List, ListItem, ListItemIcon, ListItemText, Paper, Stack, Typography } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-function AudienceCard({ title, description, highlights }) {
+function AudienceCard({ title, description, highlights, cta }) {
   return (
     <Paper
       elevation={0}
@@ -31,6 +31,28 @@ function AudienceCard({ title, description, highlights }) {
             </ListItem>
           ))}
         </List>
+        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
+          
+            <Button
+              key={cta.label}
+              // component={RouterLink}
+              to={cta.to}
+              // variant={index === 0 ? 'contained' : 'outlined'}
+              // color="inherit"
+              size="large"
+              sx={{
+                bgcolor: 'primary.main',
+                
+                color: 'common.white',
+                '&:hover': {
+                  bgcolor: 'primary.dark',
+                },
+              }}
+            >
+              {cta.label}
+            </Button>
+            
+          </Stack>
       </Stack>
     </Paper>
   );
@@ -48,9 +70,9 @@ function JoinSection({ content }) {
       <Container maxWidth="lg">
         <Stack spacing={3} textAlign="center" sx={{ mb: 6 }}>
           <Typography variant="overline" sx={{ letterSpacing: 3, color: 'primary.main' }}>
-            {content.heading}
+            Who can join
           </Typography>
-          <Typography variant="h3">Built for owners and investors ready to lead</Typography>
+          <Typography variant="h3">{content.tagline}</Typography>
         </Stack>
         <Box
           sx={{
@@ -69,16 +91,24 @@ function JoinSection({ content }) {
 
 JoinSection.propTypes = {
   content: PropTypes.shape({
-    heading: PropTypes.string.isRequired,
+    tagline: PropTypes.string.isRequired,
     owner: PropTypes.shape({
       title: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
       highlights: PropTypes.arrayOf(PropTypes.string).isRequired,
+      cta: PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        to: PropTypes.string.isRequired,
+      }),
     }).isRequired,
     investor: PropTypes.shape({
       title: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
       highlights: PropTypes.arrayOf(PropTypes.string).isRequired,
+      cta: PropTypes.shape({
+        label: PropTypes.string.isRequired,
+        to: PropTypes.string.isRequired,
+      }),
     }).isRequired,
   }).isRequired,
 };
