@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Box, Card, CardContent, Container, Grid, Stack, Typography } from '@mui/material';
+import { Box, Card, CardContent, Container, Stack, Typography } from '@mui/material';
 
 function HomeHowItWorks({ steps }) {
   return (
@@ -11,48 +11,51 @@ function HomeHowItWorks({ steps }) {
           </Typography>
           <Typography variant="h3">Three steps from alignment to measurable outcomes</Typography>
         </Stack>
-        <Grid container spacing={4}>
+        <Box
+          sx={{
+            display: 'grid',
+            gap: { xs: 3, md: 4 },
+            gridTemplateColumns: { xs: '1fr', md: 'repeat(3, minmax(0, 1fr))' },
+          }}
+        >
           {steps.map(({ title, description }, index) => (
-            <Grid item xs={12} md={4} key={title}>
-              <Card
-                elevation={0}
-                sx={{
-                  height: '100%',
-                  borderRadius: 4,
-                  border: '1px solid',
-                  borderColor: 'divider',
-                  position: 'relative',
-                  overflow: 'hidden',
-                }}
-              >
-                <CardContent sx={{ p: { xs: 4, md: 5 } }}>
-                  <Stack spacing={2.5} alignItems="flex-start">
-                    <Box
-                      sx={{
-                        width: 48,
-                        height: 48,
-                        borderRadius: 3,
-                        bgcolor: 'primary.light',
-                        color: 'primary.main',
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontWeight: 700,
-                        fontSize: 18,
-                      }}
-                    >
-                      {index + 1}
-                    </Box>
-                    <Typography variant="h5">{title}</Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      {description}
-                    </Typography>
-                  </Stack>
-                </CardContent>
-              </Card>
-            </Grid>
+            <Card
+              key={title}
+              elevation={0}
+              sx={{
+                height: '100%',
+                borderRadius: 4,
+                border: '1px solid',
+                borderColor: 'divider',
+              }}
+            >
+              <CardContent sx={{ p: { xs: 4, md: 5 } }}>
+                <Stack spacing={2.5} alignItems="flex-start">
+                  <Box
+                    sx={{
+                      width: 48,
+                      height: 48,
+                      borderRadius: 3,
+                      bgcolor: 'primary.light',
+                      color: 'primary.main',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontWeight: 700,
+                      fontSize: 18,
+                    }}
+                  >
+                    {index + 1}
+                  </Box>
+                  <Typography variant="h5">{title}</Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {description}
+                  </Typography>
+                </Stack>
+              </CardContent>
+            </Card>
           ))}
-        </Grid>
+        </Box>
       </Container>
     </Box>
   );

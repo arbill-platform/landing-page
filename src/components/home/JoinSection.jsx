@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Box, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Paper, Stack, Typography } from '@mui/material';
+import { Box, Container, List, ListItem, ListItemIcon, ListItemText, Paper, Stack, Typography } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 function AudienceCard({ title, description, highlights }) {
@@ -52,14 +52,16 @@ function JoinSection({ content }) {
           </Typography>
           <Typography variant="h3">Built for owners and investors ready to lead</Typography>
         </Stack>
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={6}>
-            <AudienceCard {...content.owner} />
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <AudienceCard {...content.investor} />
-          </Grid>
-        </Grid>
+        <Box
+          sx={{
+            display: 'grid',
+            gap: { xs: 3, md: 4 },
+            gridTemplateColumns: { xs: '1fr', md: 'repeat(2, minmax(0, 1fr))' },
+          }}
+        >
+          <AudienceCard {...content.owner} />
+          <AudienceCard {...content.investor} />
+        </Box>
       </Container>
     </Box>
   );
