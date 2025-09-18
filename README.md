@@ -1,6 +1,6 @@
 # Arbill Landing Page
 
-A responsive marketing landing page for the Arbill safety platform, built with React, Vite, and Material UI.
+A responsive marketing experience for the Arbill safety platform, built with React, Vite, Material UI, and React Router.
 
 ## Prerequisites
 
@@ -9,9 +9,18 @@ A responsive marketing landing page for the Arbill safety platform, built with R
 
 ## Setup
 
+Install dependencies (updates `node_modules` and refreshes the lockfile):
+
 ```bash
 npm install
 ```
+
+## Available Pages
+
+- `/` – Home overview with hero, feature highlights, testimonials, pricing, and call to action
+- `/about` – Company mission, values, and safety track record
+- `/how-it-works` – Step-by-step platform workflow, solution spotlight, and FAQs
+- `/contact` – Demo request form and direct contact channels
 
 ## Development
 
