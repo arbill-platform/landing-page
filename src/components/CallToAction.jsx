@@ -1,4 +1,5 @@
 import { Box, Button, Container, Paper, Stack, Typography } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 
 function CallToAction() {
   return (
@@ -25,10 +26,10 @@ function CallToAction() {
               program.
             </Typography>
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
-              <Button variant="contained" size="large" color="inherit">
+              <Button variant="contained" size="large" color="inherit" component={RouterLink} to="/contact">
                 Schedule a demo
               </Button>
-              <Button variant="outlined" size="large" color="inherit">
+              <Button variant="outlined" size="large" color="inherit" component={RouterLink} to="/how-it-works">
                 Download the playbook
               </Button>
             </Stack>

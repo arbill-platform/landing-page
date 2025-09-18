@@ -16,15 +16,43 @@ import {
   Typography,
 } from '@mui/material';
 import { useState } from 'react';
+import { Link as RouterLink, useLocation } from 'react-router-dom';
 
 const drawerWidth = 320;
 
 function Navbar({ items }) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
 
   const toggleDrawer = () => {
     setMobileOpen((prev) => !prev);
   };
+
+  const closeDrawer = () => {
+    setMobileOpen(false);
+  };
+
+  const isActive = (path) => {
+    if (path === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(path);
+  };
+
+  const renderNavButton = ({ label, path }) => (
+    <Button
+      key={label}
+      color="inherit"
+      component={RouterLink}
+      to={path}
+      sx={{
+        fontWeight: 500,
+        color: isActive(path) ? 'primary.main' : 'text.primary',
+      }}
+    >
+      {label}
+    </Button>
+  );
 
   return (
     <AppBar
@@ -68,18 +96,20 @@ function Navbar({ items }) {
             spacing={3}
             sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }}
           >
-            {items.map(({ label, href }) => (
-              <Button key={label} color="inherit" href={href} sx={{ fontWeight: 500 }}>
-                {label}
-              </Button>
-            ))}
+            {items.map((item) => renderNavButton(item))}
           </Stack>
 
           <Stack direction="row" spacing={1.5} sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <Button variant="text" color="inherit" href="#login">
+            <Button
+              variant="text"
+              color="inherit"
+              component={RouterLink}
+              to="/contact"
+              sx={{ color: isActive('/contact') ? 'primary.main' : 'text.primary' }}
+            >
               Log in
             </Button>
-            <Button variant="contained" href="#demo">
+            <Button variant="contained" component={RouterLink} to="/contact">
               Book a demo
             </Button>
           </Stack>
@@ -89,6 +119,7 @@ function Navbar({ items }) {
             edge="end"
             onClick={toggleDrawer}
             sx={{ display: { xs: 'inline-flex', md: 'none' } }}
+            aria-label="Toggle navigation menu"
           >
             {mobileOpen ? <CloseIcon /> : <MenuIcon />}
           </IconButton>
@@ -117,19 +148,36 @@ function Navbar({ items }) {
           </Stack>
           <Divider />
           <List sx={{ flex: 1 }}>
-            {items.map(({ label, href }) => (
+            {items.map(({ label, path }) => (
               <ListItem key={label} disableGutters sx={{ py: 1 }}>
-                <Button fullWidth color="inherit" href={href} onClick={toggleDrawer}>
+                <Button
+                  fullWidth
+                  color="inherit"
+                  component={RouterLink}
+                  to={path}
+                  onClick={closeDrawer}
+                  sx={{
+                    justifyContent: 'flex-start',
+                    color: isActive(path) ? 'primary.main' : 'text.primary',
+                  }}
+                >
                   {label}
                 </Button>
               </ListItem>
             ))}
           </List>
           <Stack spacing={1.5}>
-            <Button variant="contained" size="large" href="#demo">
+            <Button variant="contained" size="large" component={RouterLink} to="/contact" onClick={closeDrawer}>
               Book a demo
             </Button>
-            <Button variant="text" color="inherit" href="#login">
+            <Button
+              variant="text"
+              color="inherit"
+              component={RouterLink}
+              to="/contact"
+              onClick={closeDrawer}
+              sx={{ color: isActive('/contact') ? 'primary.main' : 'text.primary' }}
+            >
               Log in
             </Button>
           </Stack>
@@ -143,7 +191,7 @@ Navbar.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       label: PropTypes.string.isRequired,
-      href: PropTypes.string.isRequired,
+      path: PropTypes.string.isRequired,
     }),
   ).isRequired,
 };

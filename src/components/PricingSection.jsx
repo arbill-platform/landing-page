@@ -11,6 +11,7 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 
 function PricingSection({ plans }) {
   return (
@@ -75,7 +76,8 @@ function PricingSection({ plans }) {
                     size="large"
                     variant={plan.highlighted ? 'contained' : 'outlined'}
                     color={plan.highlighted ? 'primary' : 'inherit'}
-                    href="#demo"
+                    component={RouterLink}
+                    to="/contact"
                   >
                     Talk with sales
                   </Button>

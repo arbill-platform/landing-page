@@ -11,6 +11,7 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 
 function HeroSection({ content }) {
   return (
@@ -25,14 +26,21 @@ function HeroSection({ content }) {
                 {content.description}
               </Typography>
               <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
-                <Button size="large" variant="contained" href={content.primaryAction.href} endIcon={<ArrowForwardIcon />}>
+                <Button
+                  size="large"
+                  variant="contained"
+                  component={RouterLink}
+                  to={content.primaryAction.to}
+                  endIcon={<ArrowForwardIcon />}
+                >
                   {content.primaryAction.label}
                 </Button>
                 <Button
                   size="large"
                   variant="outlined"
                   color="inherit"
-                  href={content.secondaryAction.href}
+                  component={RouterLink}
+                  to={content.secondaryAction.to}
                   startIcon={<PlayCircleIcon />}
                 >
                   {content.secondaryAction.label}
@@ -104,11 +112,11 @@ HeroSection.propTypes = {
     description: PropTypes.string.isRequired,
     primaryAction: PropTypes.shape({
       label: PropTypes.string.isRequired,
-      href: PropTypes.string.isRequired,
+      to: PropTypes.string.isRequired,
     }).isRequired,
     secondaryAction: PropTypes.shape({
       label: PropTypes.string.isRequired,
-      href: PropTypes.string.isRequired,
+      to: PropTypes.string.isRequired,
     }).isRequired,
     highlight: PropTypes.string.isRequired,
   }).isRequired,
