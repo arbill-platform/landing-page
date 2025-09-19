@@ -14,7 +14,7 @@ function Footer() {
         <Grid container spacing={{ xs: 6, md: 10 }}>
           <Grid item xs={12} md={4}>
             <Stack spacing={2}>
-              <Box component="img" src={logo} alt="Arbill Logo" sx={{  }} />
+              <Box component="img" src={logo} alt="Arbill Logo" sx={{ maxWidth: 200 }} />
               
               <Typography variant="body2" sx={{ color: 'grey.400' }}>
                 Building Prestige Through Responsible Investment.
