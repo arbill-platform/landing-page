@@ -14,7 +14,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 function ProcessColumn({ title, steps }) {
   return (
     <Stack spacing={2}>
-      <Typography variant="h4">{title}</Typography>
+      <Typography variant="h5" align='center'>{title}</Typography>
       <Stack spacing={1.5}>
         {steps.map(({ title: stepTitle, description }) => (
           <Accordion key={stepTitle} disableGutters>
@@ -50,16 +50,16 @@ function ProcessSection({ processes }) {
     <Box component="section" sx={{ py: { xs: 10, md: 14 }, bgcolor: 'background.paper' }}>
       <Container maxWidth="lg">
         <Stack spacing={2} sx={{ mb: 6 }} textAlign={{ xs: 'left', md: 'center' }} alignItems={{ xs: 'flex-start', md: 'center' }}>
-          <Typography variant="h3">{processes.heading}</Typography>
+          <Typography variant="h3" color='primary.main'>{processes.heading}</Typography>
           <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 780 }}>
             {processes.subheading}
           </Typography>
         </Stack>
         <Grid container spacing={{ xs: 4, md: 6 }}>
-          <Grid item xs={12} sm={6} md={6}>
+          <Grid item size={{xs:12, md:6}}>
             <ProcessColumn {...processes.owner} />
           </Grid>
-          <Grid item xs={12} sm={6} md={6}>
+          <Grid item size={{xs:12, md:6}}>
             <ProcessColumn {...processes.investor} />
           </Grid>
         </Grid>

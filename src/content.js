@@ -193,36 +193,47 @@ export const aboutContent = {
   ],
   quote: {
     text: 'At Arbill, we believe credibility is not claimed - it is proven through action, we have faced volatility, endured challenges, and built trust step by step. Today, we are committed to transforming that foundation into a sustainable, globally trusted investment platform for the future.',
-    author: 'Casey Franklin',
+    author: 'Casey Farming',
     role: 'CEO, Arbill',
   },
 };
 
 export const howItWorksContent = {
-  hero: {
-    kicker: 'How it works',
+  hero: {    
     title: 'A coordinated path from insight to execution',
     subtitle:
-      'We align project owners and investors around shared goals, orchestrating the people, processes, and protections needed to deliver measurable outcomes.',
+      'Clear processes for both Project Owners and Investors, ensuring secure contracts, transparent fund flow, and milestone-based accoutablity.',
   },
   processes: {
-    heading: 'Operational excellence for every stakeholder',
+    heading: 'Two Roles, One Trusted Platform',
     subheading:
-      'Project owners and investors collaborate through synchronized journeys tailored to their objectives.',
+      'Arbill operates with clear processes tailored for Project Owners and Investors. Each journey is different, but both are built on the same foundation of security, transparency and accountability',
     owner: {
       title: 'Project Owner Process',
       steps: [
         {
-          title: 'Scope & Alignment',
-          description: 'Define safety benchmarks, resource needs, and compliance requirements across sites and partners.',
+          title: '1. Onboarding',
+          description: 'Share your project details. We will verify your identity, review your plan, and make sure everything is ready for investors to trust.',
         },
         {
-          title: 'Workflow Activation',
-          description: 'Digitize inspections, corrective actions, and gear fulfilment to empower teams in the field.',
+          title: '2. Listing',
+          description: 'Once approved, your project appears on Arbill Platform with clear terms - interest rate, duration, milestones, and other key details.',
         },
         {
-          title: 'Performance Optimization',
-          description: 'Monitor dashboards, address emerging risks, and refine programs with Arbill advisors.',
+          title: '3. Milestone-based Releases',
+          description: 'Funds are unlocked gradually as you achieve agreed milestones. This ensures money is used responsibly and boosts Investor confidence.',
+        },
+        {
+          title: '4. Progress Reporting',
+          description: 'Keep your investors updated with regular progress reports. We help you structure updates so they are clear and easy to follow.',
+        },
+        {
+          title: '5. Interest Servicing',
+          description: 'Pay interest to your investors from your Operating fund, showing consistency and reliability.',
+        },
+        {
+          title: '6. Closure',
+          description: 'At completion, investor principal and final returns are released, you get back the assurance. If a project doesn\'t succeed, undisbursed fund are refunded safely.',
         },
       ],
     },
@@ -230,49 +241,57 @@ export const howItWorksContent = {
       title: 'Investor Process',
       steps: [
         {
-          title: 'Portfolio Diagnostics',
-          description: 'Assess ESG posture, risk exposure, and capital plans with a unified data review.',
+          title: '1. Create Your Account',
+          description: 'Sign up, complete a quick verification, and deposit your crypto securely with our trusted custodian.',
         },
         {
-          title: 'Governance Enablement',
-          description: 'Implement standardized reporting, escalation paths, and partner expectations.',
+          title: '2. Explore & Commit',
+          description: 'Browse carefully reviewed projects, check their terms, and commit the amount you choose.',
         },
         {
-          title: 'Impact Reporting',
-          description: 'Benchmark performance, surface opportunities, and communicate outcomes to stakeholders.',
+          title: '3. Track Progress',
+          description: 'See exactly how your funds are allocated. Monitor milestones, updates, and financial reports in real time.',
+        },
+        {
+          title: '4. Earn Interest',
+          description: 'Your interest payments appear directly in your account, ready to reinvest or withdraw at any time.',
+        },
+        {
+          title: '5. Project Closure',
+          description: 'When a project succeeds, your principal and interest are returned. If it fails, your remaining funds are refunded and covered by any Assurance fund provided.',
         },
       ],
     },
   },
   highlight: {
-    heading: 'Why Arbill delivers results',
-    subheading: 'Our connected ecosystem keeps owners and investors aligned, informed, and ready to act.',
+    heading: 'Built-in Safeguards for Every Transaction',
+    subheading: 'Investor capital and project funds are strictly controlled. Every disbursement is tied to evidence, approvals, and daily reconciliation for maximum security.',
     pillars: [
       {
-        title: 'Connected intelligence',
-        description: 'Real-time data across projects and portfolios for confident decisions.',
+        title: 'Custody Boundary',
+        description: 'Only deposits and withdrawals touch the custodian.',
         icon: 'Lan',
       },
       {
-        title: 'Predictive governance',
-        description: 'Automation and alerts that surface risk before it impacts your goals.',
+        title: 'Milestone Discipline',
+        description: 'Funds are released only after milestone verification.',
         icon: 'ManageHistory',
       },
       {
-        title: 'Integrated enablement',
-        description: 'Training, procurement, and advisory services unified under one roof.',
+        title: 'No Cross-Project Reuse',
+        description: 'Project funds cannot be diverted elsewhere.',
         icon: 'Hub',
       },
       {
-        title: 'Continuous partnership',
-        description: 'Dedicated specialists driving progress long after launch.',
+        title: 'Assurance Fund',
+        description: 'The safety pool to compensate investors on failure.',
         icon: 'Handshake',
       },
     ],
   },
   quote: {
-    text: 'Safety performance is a shared journey. When owners and investors align, every project becomes a catalyst for sustainable growth.',
-    author: 'Michael Davis',
+    text: 'Together, you and us create a future where investment are responsible.',
+    author: 'Jokie Downing',
     role: 'Chief Strategy Officer, Arbill',
     ctas: [
       { label: 'Partner as a Project Owner', to: '/contact?audience=owner' },

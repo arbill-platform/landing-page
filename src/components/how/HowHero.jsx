@@ -6,9 +6,6 @@ function HowHero({ hero }) {
     <Box component="section" sx={{ py: { xs: 12, md: 16 }, bgcolor: 'background.default' }}>
       <Container maxWidth="lg">
         <Stack spacing={2.5} textAlign={{ xs: 'left', md: 'center' }} alignItems={{ xs: 'flex-start', md: 'center' }}>
-          <Typography variant="overline" sx={{ letterSpacing: 3, color: 'primary.main' }}>
-            {hero.kicker}
-          </Typography>
           <Typography variant="h2" sx={{ maxWidth: 780 }}>
             {hero.title}
           </Typography>

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Box, Button, Container, Paper, Stack, Typography } from '@mui/material';
+import { Box, Button, Container, Paper, Stack, Typography, Grid } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 
 function QuoteCtaSection({ quote }) {
@@ -16,32 +16,39 @@ function QuoteCtaSection({ quote }) {
             textAlign: 'center',
           }}
         >
-          <Stack spacing={3} alignItems="center">
-            <Typography variant="h3" sx={{ fontStyle: 'italic', lineHeight: 1.6 }}>
-              “{quote.text}”
-            </Typography>
-            <Stack spacing={0.5}>
-              <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
-                {quote.author}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {quote.role}
-              </Typography>
-            </Stack>
-            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
-              {quote.ctas.map(({ label, to }, index) => (
-                <Button
-                  key={label}
-                  variant={index === 0 ? 'contained' : 'outlined'}
-                  size="large"
-                  component={RouterLink}
-                  to={to}
-                >
-                  {label}
-                </Button>
-              ))}
-            </Stack>
-          </Stack>
+          <Grid container>
+            <Grid size={{sm:12, md:8}}>
+              <Stack spacing={3} alignItems="center">
+                <Typography variant="h5" sx={{ fontStyle: 'italic', lineHeight: 1.6 }}>
+                  “{quote.text}”
+                </Typography>
+                <Stack spacing={0.5}>
+                  <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
+                    {quote.author}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    {quote.role}
+                  </Typography>
+                </Stack>
+              </Stack>
+            </Grid>
+
+            <Grid size={{sm: 12, md:4}}>
+                <Stack direction={{ xs: 'row', sm: 'column' }} marginTop={{xs: 5, md: 0}} spacing={2}>
+                  {quote.ctas.map(({ label, to }, index) => (
+                    <Button
+                    key={label}
+                    variant={index === 0 ? 'contained' : 'outlined'}
+                    size="large"
+                    component={RouterLink}
+                    to={to}
+                    >
+                      {label}
+                    </Button>
+                  ))}
+                </Stack>
+              </Grid>
+          </Grid>
         </Paper>
       </Container>
     </Box>
