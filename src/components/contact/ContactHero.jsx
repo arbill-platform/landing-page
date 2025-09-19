@@ -5,10 +5,7 @@ function ContactHero({ hero }) {
   return (
     <Box component="section" sx={{ py: { xs: 12, md: 16 } }}>
       <Container maxWidth="lg">
-        <Stack spacing={2.5} sx={{ maxWidth: 720 }}>
-          <Typography variant="overline" sx={{ letterSpacing: 3, color: 'primary.main' }}>
-            {hero.kicker}
-          </Typography>
+        <Stack spacing={2.5} sx={{ maxWidth: 720 }}>          
           <Typography variant="h1" sx={{ fontSize: { xs: '2.4rem', md: '3.2rem' }, lineHeight: 1.2 }}>
             {hero.title}
           </Typography>

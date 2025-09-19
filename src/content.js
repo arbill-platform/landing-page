@@ -340,59 +340,66 @@ export const faqs = [
 ];
 
 export const contactContent = {
-  hero: {
-    kicker: 'Contact Arbill',
-    title: 'Let’s shape safer, smarter projects together',
+  hero: {    
+    title: 'Get in Touch with Arbill',
     subtitle:
-      'Reach our specialists, share your goals, and discover how Arbill empowers project owners and investors to deliver with confidence.',
+      'We are here to support Project Owners, Investors and partners worldwide.',
   },
   addressBook: {
-    heading: 'Your address book',
+    heading: 'Your Address Book',
+    subheading: 'Choose the right channels for your inquiry, and our team will respond promptly.',
     cards: [
       {
         title: 'General inquiries',
-        email: 'hello@arbill.com',
-        description: 'Questions about our platform, services, or partnership opportunities.',
+        email: 'contact@arbill.co',
+        description: 'For questions about our platform, services, or partnerships.',
+        icon: "Global",
       },
       {
-        title: 'Project owner support',
+        title: 'Project Owners',
         email: 'projects@arbill.com',
-        description: 'Active projects, onboarding requests, and field enablement assistance.',
+        description: 'Submit your proposal or request support or onboarding',
+        icon: "Briefcase"
       },
       {
-        title: 'Investor relations',
+        title: 'Investors',
         email: 'investors@arbill.com',
-        description: 'Portfolio strategy, ESG reporting, and governance collaboration.',
+        description: 'For assistance with accounts, deposits, or investment details.',
+        icon: "Team"
       },
     ],
   },
   form: {
-    heading: 'Tell us about your goals',
-    description: 'Share a few details and we’ll connect you with the right Arbill specialist within one business day.',
+    heading: 'Send Us a Message',
+    description: 'Prefer direct communication? Use the form below and we will get back to you.',
   },
   community: {
     heading: 'Join the community',
-    subheading: 'Tap into insights, conversations, and live sessions with the Arbill team.',
+    subheading: 'Stay connected with Arbill across professional networks and investor groups.',
     channels: [
       {
-        title: 'Telegram',
+        title: 'Join Group',
         description: 'Real-time updates and Q&A with safety strategists.',
         link: 'https://t.me/arbill',
+        icon: 'Telegram'
       },
       {
-        title: 'YouTube Channel',
+        title: 'Subscribe Channel',
         description: 'Workshops, platform walkthroughs, and customer stories.',
         link: 'https://youtube.com/@arbill',
+        icon: 'YouTube'
       },
       {
-        title: 'Facebook Fanpage',
+        title: 'Follow Fanpage',
         description: 'Community highlights, event recaps, and best practices.',
         link: 'https://facebook.com/arbill',
+        icon: 'Facebook'
       },
       {
-        title: 'LinkedIn',
+        title: 'Follow LinkedIn',
         description: 'Industry trends, leadership insights, and partnerships.',
         link: 'https://linkedin.com/company/arbill',
+        icon: 'LinkedIn'
       },
     ],
   },
