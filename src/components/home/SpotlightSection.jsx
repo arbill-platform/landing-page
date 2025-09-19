@@ -13,7 +13,7 @@ function SpotlightSection({ content }) {
             p: { xs: 4, md: 6 },
             textAlign: 'center',
             backgroundColor: 'primary.main',
-            backgroundImage: 'linear-gradient(135deg, rgba(0, 109, 119, 0.95), rgba(6, 214, 160, 0.65))',
+            backgroundImage: 'linear-gradient(135deg, #2E7D32, #00897B)',
             color: 'common.white',
           }}
         >

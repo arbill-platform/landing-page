@@ -10,7 +10,7 @@ export const homeHero = {
   subtitle:
     'Since 2020, Arbill provided a trusted investment platform where Project Owners secure funding and Investors discover opportunities with crypto-powered transparency and secure contracts.',
   backgroundImage:
-    'linear-gradient(120deg, rgba(0, 109, 119, 0.65), rgba(6, 214, 160, 0.55)), url("https://images.unsplash.com/photo-1529429617124-aee0113a1a7b?auto=format&fit=crop&w=1600&q=80")',
+    'linear-gradient(120deg, #42A5F5, #FFB300), url("https://images.unsplash.com/photo-1529429617124-aee0113a1a7b?auto=format&fit=crop&w=1600&q=80")',
   ctas: [
     { label: 'For Project Owner', to: 'https://docs.google.com/forms/d/e/1FAIpQLSedYXivZ4dGUGllDSq7BrsMPaAq_skAGRZE37mJpMrfXHW6DA/viewform?usp=sharing&ouid=116642674041425281083' },
     { label: 'For Investor', to: 'https://app.arbill.co' },
@@ -126,7 +126,7 @@ export const aboutContent = {
     subtitle:
       'Resilient in challenges. Transparent in process. Sustainable in vision.',
     backgroundImage:
-      'linear-gradient(115deg, rgba(0, 109, 119, 0.7), rgba(6, 214, 160, 0.5)), url("https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?auto=format&fit=crop&w=1600&q=80")',
+      'linear-gradient(115deg, #1565C0A3, #06d6a080), url("https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?auto=format&fit=crop&w=1600&q=80")',
   },
   highlights: [
     {
