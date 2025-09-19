@@ -17,6 +17,7 @@ import {
 } from '@mui/material';
 import { useState } from 'react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
+import mainLogo from '../assets/images/logo-full.png';
 
 const drawerWidth = 320;
 
@@ -65,6 +66,15 @@ function Navbar({ items }) {
         <Toolbar disableGutters sx={{ py: 1.5, gap: 4 }}>
           <Stack direction="row" alignItems="center" spacing={1.5} sx={{ flexGrow: 1 }}>
             <Box
+              component="img"
+              src={mainLogo}
+              alt="Arbill Logo"
+              sx={{
+                height: 40,
+                width: 'auto',
+              }}
+            />
+            {/* <Box
               component="span"
               sx={{
                 width: 42,
@@ -88,7 +98,7 @@ function Navbar({ items }) {
               <Typography variant="caption" sx={{ color: 'text.secondary' }}>
                 Safety Intelligence Platform
               </Typography>
-            </Box>
+            </Box> */}
           </Stack>
 
           <Stack
@@ -104,14 +114,11 @@ function Navbar({ items }) {
               variant="text"
               color="inherit"
               component={RouterLink}
-              to="/contact"
-              sx={{ color: isActive('/contact') ? 'primary.main' : 'text.primary' }}
+              to="https://arbill.vv0lll.com/login"
+              sx={ 'text.primary' }
             >
               Log in
-            </Button>
-            <Button variant="contained" component={RouterLink} to="/contact">
-              Book a demo
-            </Button>
+            </Button>            
           </Stack>
 
           <IconButton
@@ -167,14 +174,11 @@ function Navbar({ items }) {
             ))}
           </List>
           <Stack spacing={1.5}>
-            <Button variant="contained" size="large" component={RouterLink} to="/contact" onClick={closeDrawer}>
-              Book a demo
-            </Button>
             <Button
               variant="text"
               color="inherit"
               component={RouterLink}
-              to="/contact"
+              to="https://arbill.vv0lll.com/login"
               onClick={closeDrawer}
               sx={{ color: isActive('/contact') ? 'primary.main' : 'text.primary' }}
             >

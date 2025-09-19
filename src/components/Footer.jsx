@@ -1,4 +1,5 @@
 import { Box, Container, Grid, Link, Stack, Typography } from '@mui/material';
+import logo from '../assets/images/logo-full.png';
 
 const footerLinks = {
   Product: ['Platform overview', 'Mobile app', 'Analytics', 'Compliance'],
@@ -8,17 +9,18 @@ const footerLinks = {
 
 function Footer() {
   return (
-    <Box component="footer" sx={{ py: 8, bgcolor: 'grey.900', color: 'grey.100' }}>
+    <Box component="footer" sx={{ py: 8, bgcolor: '#121212', color: 'grey.100' }}>
       <Container maxWidth="lg">
         <Grid container spacing={{ xs: 6, md: 10 }}>
           <Grid item xs={12} md={4}>
             <Stack spacing={2}>
-              <Typography variant="h5">Arbill</Typography>
+              <Box component="img" src={logo} alt="Arbill Logo" sx={{  }} />
+              
               <Typography variant="body2" sx={{ color: 'grey.400' }}>
-                Integrated safety solutions that align your people, processes, and protection.
+                Building Prestige Through Responsible Investment.
               </Typography>
               <Typography variant="body2" sx={{ color: 'grey.500' }}>
-                © {new Date().getFullYear()} Arbill Industries, Inc. All rights reserved.
+                © {new Date().getFullYear()} Arbill Platform. All rights reserved.
               </Typography>
             </Stack>
           </Grid>
