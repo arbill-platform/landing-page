@@ -1,30 +1,45 @@
 import PropTypes from 'prop-types';
-import { Box, Container, Divider, Stack, Typography } from '@mui/material';
+import { Box, Container, Divider, Stack, Typography, Card, CardContent } from '@mui/material';
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
 
 function JourneySection({ journey }) {
   return (
     <Box component="section" sx={{ py: { xs: 10, md: 14 } }}>
       <Container maxWidth="md">
-        <Stack spacing={4}>
-          <Typography variant="h3" textAlign="center">Our journey</Typography>
+        <Stack spacing={3} textAlign="center" sx={{ mb: 6 }}>
+          <Typography variant="overline" sx={{ letterSpacing: 3, color: 'primary.main' }}>
+            Our Journey
+          </Typography>          
+        </Stack>
+        <Stack spacing={4}>          
           <Stack spacing={4}>
-            {journey.map(({ year, milestone }, index) => (
-              <Stack key={year} spacing={1.5}>
-                <Stack direction="row" spacing={3} alignItems="flex-start">
-                  <Typography
-                    variant="h5"
-                    color="primary.main"
-                    sx={{ minWidth: 80, fontWeight: 700 }}
-                  >
-                    {year}
-                  </Typography>
-                  <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
-                    {milestone}
-                  </Typography>
-                </Stack>
-                {index !== journey.length - 1 && <Divider />}
-              </Stack>
-            ))}
+            <Timeline position="alternate-reverse">                      
+              {journey.map(({ year, milestone }, index) => (
+                <TimelineItem>
+                  <TimelineSeparator>
+                    <TimelineDot />
+                    <TimelineConnector />
+                  </TimelineSeparator>
+                  <TimelineContent>
+                    <Card>
+                      <CardContent>
+                        <Typography variant="h6" component="div">
+                          {year}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          {milestone}
+                        </Typography>
+                      </CardContent>
+                    </Card>
+                  </TimelineContent>
+                </TimelineItem>              
+              ))}
+            </Timeline>
           </Stack>
         </Stack>
       </Container>

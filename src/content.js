@@ -152,17 +152,11 @@ export const aboutContent = {
   ],
   story: {    
     paragraphs: [
-      'Arbill’s journey began in one of the most demanding and high-risk segments of the investment world. In an environment where many platforms collapsed under unsustainable promises, we choose a different path: honouring commitments, delivering consistent returns, and safeguarding investor capital with discipline.',
+      'Arbill’s journey began in one of the most demanding and high-risk segments of the investment world. In an environment where many platforms collapsed under unsustainable promises, we choose a different path: **honouring commitments**, **delivering consistent returns, and safeguarding investor capital** with discipline.',
       'Through this commitment, we built a reputation for reliability in a market where trust was rare. This foundation of responsibility continues to guide us today. What started as a survival journey in uncertain times has grown into a professional platform that connect Project Owners and Investor worldwide.',
+      'At Arbill, our mission is to create a trusted investment platform where meaningful projects secure the resources they need to grow, and investors discover opportunities they can believe in. By harnessing the power of cryptocurrency and transparent fund management, we bring clarity, accountability, and confidence to every step of the journey — ensuring that both visionaries and backers can focus on building lasting value together.',
+      'Our vision is to become a globally recognized, compliance-driven investment ecosystem that stands as a benchmark for trust and responsibility. We aspire to empower innovation across borders while safeguarding the interests of every investor, proving that financial growth and transparency can thrive side by side. In doing so, Arbill seeks to redefine what sustainable investing looks like in the digital era.',    
     ],
-    mission: {
-      title: 'Mission',
-      description: 'To provide a trusted investment platform where projects secure funding and investors find opportunities with confidence, powered by cryptocurrency and transparent fund management.',
-    },
-    vision: {
-      title: 'Vision',
-      description: 'To evolve into a global recognized, compliance-driven investment ecosystem, empowering innovation while protecting investor trust.',
-    },
     image:
       'url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80")',
   },
@@ -189,15 +183,17 @@ export const aboutContent = {
     },
   ],
   journey: [
-    { year: '1945', milestone: 'Arbill founded to supply critical protective equipment to local manufacturers.' },
-    { year: '1978', milestone: 'Expanded nationwide distribution with dedicated safety specialists in every region.' },
-    { year: '2001', milestone: 'Launched our safety advisory practice supporting compliance and training programs.' },
-    { year: '2015', milestone: 'Introduced connected safety services integrating data, gear, and field support.' },
-    { year: '2023', milestone: 'Unveiled the Arbill Safety Intelligence Platform for predictive insights and automation.' },
+    { year: '2024 - 2025', milestone: 'Transitioning into compliance-driven operations for global expansion.' },    
+    { year: '2023', milestone: 'Partnered with trusted custodians for secure fund management.' },
+    { year: '2021 - 2022', milestone: 'Built credibility by consistently protecting investor capital.' },
+    { year: '2020', milestone: 'Arbill Platform was established, guided by responsibility and resilience.' },
+    
+    
+    
   ],
   quote: {
-    text: 'Safety is the most human investment you can make. When people feel protected and empowered, performance follows.',
-    author: 'Julie Copeland',
+    text: 'At Arbill, we believe credibility is not claimed - it is proven through action, we have faced volatility, endured challenges, and built trust step by step. Today, we are committed to transforming that foundation into a sustainable, globally trusted investment platform for the future.',
+    author: 'Casey Franklin',
     role: 'CEO, Arbill',
   },
 };

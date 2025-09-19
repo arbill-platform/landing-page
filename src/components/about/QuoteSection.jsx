@@ -5,6 +5,11 @@ function QuoteSection({ quote }) {
   return (
     <Box component="section" sx={{ py: { xs: 10, md: 14 }, bgcolor: 'background.paper' }}>
       <Container maxWidth="md">
+      <Stack spacing={3} textAlign="center" sx={{ mb: 6 }}>
+          <Typography variant="overline" sx={{ letterSpacing: 3, color: 'primary.main' }}>
+            Our Promise
+          </Typography>          
+        </Stack>
         <Paper
           elevation={0}
           sx={{
@@ -16,10 +21,8 @@ function QuoteSection({ quote }) {
           }}
         >
           <Stack spacing={3} alignItems="center">
-            <Typography variant="overline" sx={{ letterSpacing: 4, color: 'primary.main' }}>
-              Our promise
-            </Typography>
-            <Typography variant="h3" sx={{ fontStyle: 'italic', lineHeight: 1.6 }}>
+            
+            <Typography variant="h5" sx={{ fontStyle: 'italic', lineHeight: 1.6 }}>
               “{quote.text}”
             </Typography>
             <Stack spacing={0.5}>

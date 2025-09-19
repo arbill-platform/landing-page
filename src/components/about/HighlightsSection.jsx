@@ -41,38 +41,38 @@ function HighlightsSection({ highlights }) {
             const IconComponent = iconMap[icon];
             return (
               <Card
-                key={title}
-                elevation={0}
-                sx={{
-                  borderRadius: 4,
-                  border: '1px solid',
-                  borderColor: 'divider',
-                }}
+              key={title}
+              elevation={0}
+              sx={{
+                borderRadius: 4,
+                border: '1px solid',
+                borderColor: 'divider',
+              }}
               >
-                <CardContent sx={{ p: { xs: 3, md: 4 } }}>
-                  <Stack spacing={2.5}>
-                    <Box
-                      sx={{
-                        width: 48,
-                        height: 48,
-                        borderRadius: 3,
-                        bgcolor: 'primary.light',
-                        color: 'white',
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                      }}
-                    >
-                      {IconComponent && <IconComponent fontSize="medium" />}
-                    </Box>
-                    <Stack spacing={1}>
-                      <Typography variant="h5">{title}</Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        {description}
-                      </Typography>
-                    </Stack>
-                  </Stack>
-                </CardContent>
+              <CardContent sx={{ p: { xs: 3, md: 4 } }}>
+                <Stack spacing={2.5} alignItems="center">
+                <Box
+                  sx={{
+                  width: 48,
+                  height: 48,
+                  borderRadius: 3,
+                  bgcolor: 'primary.light',
+                  color: 'white',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  }}
+                >
+                  {IconComponent && <IconComponent fontSize="medium" />}
+                </Box>
+                <Stack spacing={1} textAlign="center">
+                  <Typography variant="h5">{title}</Typography>
+                  <Typography variant="body2" color="text.secondary">
+                  {description}
+                  </Typography>
+                </Stack>
+                </Stack>
+              </CardContent>
               </Card>
             );
           })}

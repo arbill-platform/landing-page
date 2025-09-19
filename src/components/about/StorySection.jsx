@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import { Box, Container, Stack, Typography } from '@mui/material';
+import Markdown from 'react-markdown';
+
 
 function StorySection({ story }) {
   return (
@@ -19,29 +21,15 @@ function StorySection({ story }) {
             alignItems: 'center',
           }}
         >
-          <Stack spacing={3}>
-            <Stack spacing={2.5}>
-              {story.paragraphs.map((paragraph, index) => (
-                <Typography key={index} variant="body1" color="text.secondary" sx={{ lineHeight: 1.9 }}>
-                  {paragraph}
-                </Typography>
-              ))}
-            </Stack>
-            <Stack spacing={3}>
-              <Stack spacing={1}>
-                <Typography variant="h4">{story.mission.title}</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {story.mission.description}
-                </Typography>
-              </Stack>
-              <Stack spacing={1}>
-                <Typography variant="h4">{story.vision.title}</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {story.vision.description}
-                </Typography>
-              </Stack>
-            </Stack>
-          </Stack>
+        
+          <Stack>
+            {story.paragraphs.map((paragraph, index) => (
+              <Typography key={index} variant="body1" color="text.secondary" sx={{ lineHeight: 1.9 }}>                 
+                <Markdown>{paragraph}</Markdown>
+              </Typography>
+            ))}
+          </Stack>            
+          
           <Box
             sx={{
               width: '100%',
@@ -62,15 +50,7 @@ function StorySection({ story }) {
 StorySection.propTypes = {
   story: PropTypes.shape({
     heading: PropTypes.string.isRequired,
-    paragraphs: PropTypes.arrayOf(PropTypes.string).isRequired,
-    mission: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-    }).isRequired,
-    vision: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-    }).isRequired,
+    paragraphs: PropTypes.arrayOf(PropTypes.string).isRequired,    
     image: PropTypes.string.isRequired,
   }).isRequired,
 };

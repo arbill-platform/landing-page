@@ -12,7 +12,7 @@ function About() {
   return (
     <>
       <AboutHero hero={hero} />
-      <HighlightsSection highlights={highlights} />
+      {/* <HighlightsSection highlights={highlights} /> */}
       <StorySection story={story} />
       <BeliefsSection beliefs={beliefs} />
       <JourneySection journey={journey} />
