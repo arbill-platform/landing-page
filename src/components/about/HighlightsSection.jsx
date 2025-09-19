@@ -1,21 +1,26 @@
 import PropTypes from 'prop-types';
 import { Box, Card, CardContent, Container, Stack, Typography } from '@mui/material';
-import SafetyCheckIcon from '@mui/icons-material/SafetyCheck';
-import HandshakeIcon from '@mui/icons-material/Handshake';
-import InsightsIcon from '@mui/icons-material/Insights';
-import AutoGraphIcon from '@mui/icons-material/AutoGraph';
+import OutlinedFlagIcon from '@mui/icons-material/OutlinedFlag';
+import BorderClear from '@mui/icons-material/BorderClear';
+import Public from '@mui/icons-material/Public';
+import AllInclusiveIcon from '@mui/icons-material/AllInclusive';
 
 const iconMap = {
-  SafetyCheck: SafetyCheckIcon,
-  Handshake: HandshakeIcon,
-  Insights: InsightsIcon,
-  AutoGraph: AutoGraphIcon,
+  Flag: OutlinedFlagIcon,
+  BorderClear: BorderClear,
+  Global: Public,
+  Sustainability: AllInclusiveIcon,
 };
 
 function HighlightsSection({ highlights }) {
   return (
     <Box component="section" sx={{ py: { xs: 10, md: 12 }, bgcolor: 'background.paper' }}>
       <Container maxWidth="lg">
+        <Stack spacing={3} textAlign="center" sx={{ mb: 6 }}>
+          <Typography variant="overline" sx={{ letterSpacing: 3, color: 'primary.main' }}>
+            Highlights
+          </Typography>          
+        </Stack>
         <Stack
           direction={{ xs: 'column', md: 'row' }}
           spacing={3}
@@ -52,7 +57,7 @@ function HighlightsSection({ highlights }) {
                         height: 48,
                         borderRadius: 3,
                         bgcolor: 'primary.light',
-                        color: 'primary.main',
+                        color: 'white',
                         display: 'inline-flex',
                         alignItems: 'center',
                         justifyContent: 'center',

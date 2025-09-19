@@ -20,9 +20,9 @@ function AboutHero({ hero }) {
       <Box sx={{ position: 'absolute', inset: 0, bgcolor: 'rgba(12, 23, 44, 0.35)' }} />
       <Container maxWidth="lg" sx={{ position: 'relative', py: { xs: 10, md: 14 } }}>
         <Stack spacing={2} sx={{ maxWidth: 720 }}>
-          <Typography variant="overline" sx={{ letterSpacing: 4, opacity: 0.85 }}>
+          {/* <Typography variant="overline" sx={{ letterSpacing: 4, opacity: 0.85 }}>
             {hero.kicker}
-          </Typography>
+          </Typography> */}
           <Typography
             variant="h1"
             sx={{ fontSize: { xs: '2.5rem', md: '3.4rem' }, fontWeight: 700, lineHeight: 1.2 }}

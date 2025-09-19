@@ -5,6 +5,12 @@ function StorySection({ story }) {
   return (
     <Box component="section" sx={{ py: { xs: 10, md: 14 } }}>
       <Container maxWidth="lg">
+        <Stack spacing={3} textAlign="center" sx={{ mb: 6 }}>
+          <Typography variant="overline" sx={{ letterSpacing: 3, color: 'primary.main' }}>
+            Our Story
+          </Typography>
+          
+        </Stack>
         <Box
           sx={{
             display: 'grid',
@@ -14,9 +20,6 @@ function StorySection({ story }) {
           }}
         >
           <Stack spacing={3}>
-            <Typography variant="overline" sx={{ letterSpacing: 3, color: 'primary.main' }}>
-              {story.heading}
-            </Typography>
             <Stack spacing={2.5}>
               {story.paragraphs.map((paragraph, index) => (
                 <Typography key={index} variant="body1" color="text.secondary" sx={{ lineHeight: 1.9 }}>

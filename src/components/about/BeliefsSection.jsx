@@ -5,17 +5,28 @@ import FactCheckIcon from '@mui/icons-material/FactCheck';
 import Diversity3Icon from '@mui/icons-material/Diversity3';
 import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 
+import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
+import AllInclusiveIcon from '@mui/icons-material/AllInclusive';
+
 const iconMap = {
   Lightbulb: LightbulbIcon,
   FactCheck: FactCheckIcon,
   Diversity3: Diversity3Icon,
   VolunteerActivism: VolunteerActivismIcon,
+
+  Integrity: WorkspacePremiumIcon,
+  Sustainability: AllInclusiveIcon
 };
 
 function BeliefsSection({ beliefs }) {
   return (
     <Box component="section" sx={{ py: { xs: 10, md: 14 }, bgcolor: 'background.paper' }}>
       <Container maxWidth="lg">
+        <Stack spacing={3} textAlign="center" sx={{ mb: 6 }}>
+          <Typography variant="overline" sx={{ letterSpacing: 3, color: 'primary.main' }}>
+            Our Belief
+          </Typography>          
+        </Stack>
         <Box
           sx={{
             display: 'grid',
@@ -27,34 +38,35 @@ function BeliefsSection({ beliefs }) {
             const IconComponent = iconMap[icon];
             return (
               <Card
-                key={title}
-                elevation={0}
-                sx={{ borderRadius: 4, border: '1px solid', borderColor: 'divider', height: '100%' }}
+              key={title}
+              elevation={0}
+              sx={{ borderRadius: 4, border: '1px solid', borderColor: 'divider', height: '100%' }}
               >
-                <CardContent sx={{ p: { xs: 3, md: 4 } }}>
-                  <Stack spacing={2.5}>
-                    <Box
-                      sx={{
-                        width: 48,
-                        height: 48,
-                        borderRadius: 3,
-                        bgcolor: 'primary.light',
-                        color: 'primary.main',
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                      }}
-                    >
-                      {IconComponent && <IconComponent fontSize="medium" />}
-                    </Box>
-                    <Stack spacing={1}>
-                      <Typography variant="h5">{title}</Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        {description}
-                      </Typography>
-                    </Stack>
-                  </Stack>
-                </CardContent>
+              <CardContent sx={{ p: { xs: 3, md: 4 } }}>
+                <Stack direction="row" spacing={2.5} alignItems="flex-start">
+                <Box
+                  sx={{
+                  width: 48,
+                  height: 48,
+                  borderRadius: 3,
+                  bgcolor: 'primary.light',
+                  color: 'white',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                  }}
+                >
+                  {IconComponent && <IconComponent fontSize="medium" />}
+                </Box>
+                <Stack spacing={1} sx={{ flex: 1 }}>
+                  <Typography variant="h5">{title}</Typography>
+                  <Typography variant="body2" color="text.secondary">
+                  {description}
+                  </Typography>
+                </Stack>
+                </Stack>
+              </CardContent>
               </Card>
             );
           })}

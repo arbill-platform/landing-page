@@ -121,72 +121,70 @@ export const metrics = [
 ];
 
 export const aboutContent = {
-  hero: {
-    kicker: 'About Arbill',
-    title: 'Generations of safety leadership, powered by innovation',
+  hero: {    
+    title: 'Arbill - Half Decade Trusted Investment Connections',
     subtitle:
-      'We help organizations protect their people, accelerate performance, and invest with confidence through a unified safety ecosystem.',
+      'Resilient in challenges. Transparent in process. Sustainable in vision.',
     backgroundImage:
       'linear-gradient(115deg, rgba(0, 109, 119, 0.7), rgba(6, 214, 160, 0.5)), url("https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?auto=format&fit=crop&w=1600&q=80")',
   },
   highlights: [
     {
-      title: 'People first',
-      description: 'We design every experience to protect frontline teams and empower the leaders who support them.',
-      icon: 'SafetyCheck',
+      title: 'Founded In 2020',
+      description: 'Proven resilience in challenging markets',
+      icon: 'Flag',
     },
     {
-      title: 'Trusted partnerships',
-      description: 'Our advisors operate as an extension of your organization from planning through execution.',
-      icon: 'Handshake',
+      title: 'Transparency',
+      description: 'Blockchain-backed contracts and fund flow',
+      icon: 'BorderClear',
     },
     {
-      title: 'Data-driven insight',
-      description: 'Real-time analytics and predictive models help you act fast and stay ahead of risk.',
-      icon: 'Insights',
+      title: 'Global Community',
+      description: 'Worldwide Project Owners and Investors',
+      icon: 'Global',
     },
     {
-      title: 'Sustainable impact',
-      description: 'We align people, process, and product strategies to deliver lasting value for stakeholders.',
-      icon: 'AutoGraph',
+      title: 'Sustainability First',
+      description: 'Steady growth, long-term trust',
+      icon: 'Sustainability',
     },
   ],
-  story: {
-    heading: 'Our story',
+  story: {    
     paragraphs: [
-      'Arbill began in 1945 supplying essential protective equipment to the manufacturers who powered American industry. As technology, regulations, and expectations evolved, so did we.',
-      'Today, we bring together predictive software, national safety expertise, and a robust supply network to help ambitious organizations deliver safer, smarter projects.',
+      'Arbill’s journey began in one of the most demanding and high-risk segments of the investment world. In an environment where many platforms collapsed under unsustainable promises, we choose a different path: honouring commitments, delivering consistent returns, and safeguarding investor capital with discipline.',
+      'Through this commitment, we built a reputation for reliability in a market where trust was rare. This foundation of responsibility continues to guide us today. What started as a survival journey in uncertain times has grown into a professional platform that connect Project Owners and Investor worldwide.',
     ],
     mission: {
       title: 'Mission',
-      description: 'Equip every workforce with the insight, equipment, and support they need to go home safe and proud.',
+      description: 'To provide a trusted investment platform where projects secure funding and investors find opportunities with confidence, powered by cryptocurrency and transparent fund management.',
     },
     vision: {
       title: 'Vision',
-      description: 'Build the most trusted safety ecosystem where project owners, investors, and teams collaborate to create lasting impact.',
+      description: 'To evolve into a global recognized, compliance-driven investment ecosystem, empowering innovation while protecting investor trust.',
     },
     image:
       'url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80")',
   },
   beliefs: [
     {
-      title: 'Innovation with purpose',
-      description: 'We explore new ideas that make safety programs more intuitive, predictive, and resilient.',
-      icon: 'Lightbulb',
+      title: 'Integrity',
+      description: 'Every project is reviewed with care and fairness.',
+      icon: 'Integrity',
     },
     {
-      title: 'Accountability in action',
-      description: 'Transparent reporting and shared KPIs keep everyone aligned on outcomes.',
+      title: 'Transparency',
+      description: 'Clear processes supported by blockchain technology.',
       icon: 'FactCheck',
     },
     {
-      title: 'Inclusive collaboration',
-      description: 'We unite owners, investors, and frontline teams around shared success.',
-      icon: 'Diversity3',
+      title: 'Sustainability',
+      description: 'Long-term opportunities over short-term gains.',
+      icon: 'Sustainability',
     },
     {
-      title: 'Sustained guardianship',
-      description: 'Our guidance extends beyond launch with continuous coaching and dedicated support.',
+      title: 'Resilience',
+      description: 'Proven ability to operate responsibly in challenging markets.',
       icon: 'VolunteerActivism',
     },
   ],
