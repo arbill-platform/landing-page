@@ -30,6 +30,12 @@ Run the local dev server:
 npm run dev
 ```
 
+Run the local dev server with Docker environment
+
+```bash
+docker run --rm -it -v ${PWD}:/app -w /app -p 5173:5173 node:latest npm run dev
+```
+
 The app is served at http://localhost:5173/ by default.
 
 ## Production Build
