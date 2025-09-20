@@ -4,7 +4,7 @@ import logo from '../assets/images/logo-full.png';
 const footerLinks = {
   Product: ['Platform overview', 'Mobile app', 'Analytics', 'Compliance'],
   Company: ['About', 'Careers', 'Partners', 'News'],
-  Resources: ['Guides', 'Safety academy', 'Events', 'Support'],
+  Resources: ['Guides', 'Investment Academy', 'Events', 'Support'],
 };
 
 function Footer() {

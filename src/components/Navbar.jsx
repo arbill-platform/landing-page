@@ -73,32 +73,7 @@ function Navbar({ items }) {
                 height: 40,
                 width: 'auto',
               }}
-            />
-            {/* <Box
-              component="span"
-              sx={{
-                width: 42,
-                height: 42,
-                borderRadius: 2,
-                bgcolor: 'primary.main',
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'common.white',
-                fontWeight: 700,
-                fontSize: 18,
-              }}
-            >
-              A
-            </Box>
-            <Box>
-              <Typography variant="subtitle2" sx={{ letterSpacing: 3, color: 'text.secondary' }}>
-                ARBILL
-              </Typography>
-              <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-                Safety Intelligence Platform
-              </Typography>
-            </Box> */}
+            />            
           </Stack>
 
           <Stack
@@ -151,7 +126,7 @@ function Navbar({ items }) {
             <Typography variant="subtitle2" sx={{ letterSpacing: 3, color: 'text.secondary' }}>
               ARBILL
             </Typography>
-            <Typography variant="h5">Safety Intelligence Platform</Typography>
+            <Typography variant="h5">Prestige Investment Platform</Typography>
           </Stack>
           <Divider />
           <List sx={{ flex: 1 }}>
