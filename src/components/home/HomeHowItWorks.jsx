@@ -31,23 +31,25 @@ function HomeHowItWorks({ content }) {
             >
               <CardContent sx={{ p: { xs: 4, md: 5 } }}>
                 <Stack spacing={2.5} alignItems="flex-start">
-                  <Box
-                    sx={{
-                      width: 48,
-                      height: 48,
-                      borderRadius: 3,
-                      bgcolor: 'primary.light',
-                      color: 'common.white',
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      fontWeight: 700,
-                      fontSize: 18,
-                    }}
-                  >
-                    {index + 1}
-                  </Box>
-                  <Typography variant="h5">{title}</Typography>
+                  <Stack direction="row" spacing={1} alignItems="center">
+                    <Box
+                      sx={{
+                        width: 32,
+                        height: 32,
+                        borderRadius: 3,
+                        bgcolor: 'primary.light',
+                        color: 'common.white',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        fontWeight: 700,
+                        fontSize: 18,
+                      }}
+                    >
+                      {index + 1}
+                    </Box>
+                    <Typography variant="h5">{title}</Typography>
+                  </Stack>
                   <Typography variant="body2" color="text.secondary">
                     {description}
                   </Typography>

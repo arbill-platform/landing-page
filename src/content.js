@@ -35,19 +35,19 @@ export const homeHowItWorkSteps = {
   tagline: 'Clear steps to connect ideas with capital.',
   steps: [
   {
-    title: 'Align goals & benchmarks',
+    title: 'Proposal Submission',
     description:
-      'We assess operational priorities, compliance requirements, and capital plans to build a tailored safety roadmap for your portfolio.',
+      'Project owners submit their ideas, which are reviewed to ensure quality, feasibility, and investor confidence.',
   },
   {
-    title: 'Activate intelligent workflows',
+    title: 'Contract Facilitation',
     description:
-      'Digitize inspections, risk mitigation processes, and procurement, ensuring your teams have the right data and protective gear on day one.',
+      'Arbill helps both sides formalize agreements with secure, transparent contracts that define terms and responsibilities.',
   },
   {
-    title: 'Measure and scale impact',
+    title: 'Fund Management',
     description:
-      'Track performance with real-time dashboards, benchmark across assets, and evolve programs with guidance from Arbill experts.',
+      'Investments are handled through controlled, milestone-based disbursements, ensuring funds are used responsibly and transparently.',
   },
 ]};
 
@@ -357,13 +357,13 @@ export const contactContent = {
       },
       {
         title: 'Project Owners',
-        email: 'projects@arbill.com',
+        email: 'projects@arbill.co',
         description: 'Submit your proposal or request support or onboarding',
         icon: "Briefcase"
       },
       {
         title: 'Investors',
-        email: 'investors@arbill.com',
+        email: 'investors@arbill.co',
         description: 'For assistance with accounts, deposits, or investment details.',
         icon: "Team"
       },
@@ -386,19 +386,19 @@ export const contactContent = {
       {
         title: 'Subscribe Channel',
         description: 'Workshops, platform walkthroughs, and customer stories.',
-        link: 'https://youtube.com/@arbill',
+        link: 'https://youtube.com/@ArbillPlatform',
         icon: 'YouTube'
       },
       {
         title: 'Follow Fanpage',
         description: 'Community highlights, event recaps, and best practices.',
-        link: 'https://facebook.com/arbill',
+        link: 'https://www.facebook.com/arbillfund',
         icon: 'Facebook'
       },
       {
         title: 'Follow LinkedIn',
         description: 'Industry trends, leadership insights, and partnerships.',
-        link: 'https://linkedin.com/company/arbill',
+        link: 'https://www.linkedin.com/company/arbill-platform',
         icon: 'LinkedIn'
       },
     ],
