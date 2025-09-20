@@ -1,4 +1,9 @@
-import { heroImage } from './assets';
+import { heroImage, heroAbout, heroHIW, heroContact, whoAreWe, ourStory } from './assets';
+
+export const links = {
+  projectOwnerForm: 'https://forms.gle/vr36TtFpqntvCDrA9',
+  investorLogin: 'https://arbill.vv0lll.com/login',
+}
 
 export const navigationItems = [
   { label: 'Home', path: '/' },
@@ -14,8 +19,8 @@ export const homeHero = {
   backgroundImage:
     `linear-gradient(120deg, #42A5F533, #FFB30055), url("${heroImage}")`,
   ctas: [
-    { label: 'For Project Owner', to: 'https://docs.google.com/forms/d/e/1FAIpQLSedYXivZ4dGUGllDSq7BrsMPaAq_skAGRZE37mJpMrfXHW6DA/viewform?usp=sharing&ouid=116642674041425281083' },
-    { label: 'For Investor', to: 'https://arbill.vv0lll.com' },
+    { label: 'For Project Owner', to: links.projectOwnerForm },
+    { label: 'For Investor', to: links.investorLogin },
   ],
 };
 
@@ -30,7 +35,7 @@ export const whoWeAreContent = {
     'Sustainable Growth: We prioritize long-term value for both investors and project owners, not short-term gains.',
   ],
   image:
-    'url("https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1000&q=80")',
+    `url("${whoAreWe}")`,
 };
 
 export const homeHowItWorkSteps = {
@@ -64,7 +69,7 @@ export const joinAudienceContent = {
       'Guidance on milestones, reporting, and responsible fund use.',
       'Listing on a platform that values trust and transparency.',
     ],
-    cta: { label: 'Submit Your Project', to: 'https://docs.google.com/forms/d/e/1FAIpQLSedYXivZ4dGUGllDSq7BrsMPaAq_skAGRZE37mJpMrfXHW6DA/viewform?usp=sharing&ouid=116642674041425281083' },
+    cta: { label: 'Submit Your Project', to: links.projectOwnerForm },
   },
   investor: {
     title: 'Investors',
@@ -75,7 +80,7 @@ export const joinAudienceContent = {
       'Track your investments with blockchain-backed reporting.',
       'Earn reasonable income with safeguards against extreme risks.',
     ],
-    cta: { label: 'Start Investing', to: 'https://app.arbill.co' },
+    cta: { label: 'Start Investing', to: links.investorLogin },
   
   },
   
@@ -112,8 +117,8 @@ export const spotlightContent = {
   heading: 'Join the Arbill Network Today',
   description:
     'Whether you are a Project Owner or an Investor, Arbill Platform is your partner in building sustainable opportunities.',
-  primaryCta: { label: 'Start your project', to: '/contact?audience=owner' },
-  secondaryCta: { label: 'Invest with confidence', to: '/contact?audience=investor' },
+  primaryCta: { label: 'Start your project', to: links.projectOwnerForm },
+  secondaryCta: { label: 'Invest with confidence', to: links.investorLogin },
 };
 
 export const metrics = [
@@ -128,7 +133,7 @@ export const aboutContent = {
     subtitle:
       'Resilient in challenges. Transparent in process. Sustainable in vision.',
     backgroundImage:
-      'linear-gradient(115deg, #1565C0A3, #06d6a080), url("https://images.unsplash.com/photo-1508873696983-2dfd5898f08b?auto=format&fit=crop&w=1600&q=80")',
+      `linear-gradient(115deg, #1565C0A3, #06d6a080), url("${heroAbout}")`,
   },
   highlights: [
     {
@@ -160,7 +165,7 @@ export const aboutContent = {
       'Our vision is to become a globally recognized, compliance-driven investment ecosystem that stands as a benchmark for trust and responsibility. We aspire to empower innovation across borders while safeguarding the interests of every investor, proving that financial growth and transparency can thrive side by side. In doing so, Arbill seeks to redefine what sustainable investing looks like in the digital era.',    
     ],
     image:
-      'url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80")',
+      `url("${ourStory}")`,
   },
   beliefs: [
     {
@@ -205,6 +210,8 @@ export const howItWorksContent = {
     title: 'A coordinated path from insight to execution',
     subtitle:
       'Clear processes for both Project Owners and Investors, ensuring secure contracts, transparent fund flow, and milestone-based accoutablity.',
+    backgroundImage:
+      `linear-gradient(115deg, #1565C0A3, #21212180), url("${heroHIW}")`,
   },
   processes: {
     heading: 'Two Roles, One Trusted Platform',
@@ -296,8 +303,8 @@ export const howItWorksContent = {
     author: 'Jokie Downing',
     role: 'Chief Strategy Officer, Arbill',
     ctas: [
-      { label: 'Partner as a Project Owner', to: '/contact?audience=owner' },
-      { label: 'Partner as an Investor', to: '/contact?audience=investor' },
+      { label: 'Partner as a Project Owner', to: links.projectOwnerForm },
+      { label: 'Partner as an Investor', to: links.investorLogin },
     ],
   },
 };
@@ -346,6 +353,8 @@ export const contactContent = {
     title: 'Get in Touch with Arbill',
     subtitle:
       'We are here to support Project Owners, Investors and partners worldwide.',
+    backgroundImage:
+      `linear-gradient(115deg, #1565C0A3, #546E7A80), url("${heroContact}")`,
   },
   addressBook: {
     heading: 'Your Address Book',

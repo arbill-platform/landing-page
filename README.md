@@ -51,3 +51,6 @@ Preview the production output locally:
 ```bash
 npm run preview
 ```
+
+## References
+- Photo source: [Unsplash](https://unsplash.com/)
