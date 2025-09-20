@@ -1,3 +1,5 @@
+import { heroImage } from './assets';
+
 export const navigationItems = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
@@ -10,10 +12,10 @@ export const homeHero = {
   subtitle:
     'Since 2020, Arbill provided a trusted investment platform where Project Owners secure funding and Investors discover opportunities with crypto-powered transparency and secure contracts.',
   backgroundImage:
-    'linear-gradient(120deg, #42A5F5, #FFB300), url("https://images.unsplash.com/photo-1529429617124-aee0113a1a7b?auto=format&fit=crop&w=1600&q=80")',
+    `linear-gradient(120deg, #42A5F533, #FFB30055), url("${heroImage}")`,
   ctas: [
     { label: 'For Project Owner', to: 'https://docs.google.com/forms/d/e/1FAIpQLSedYXivZ4dGUGllDSq7BrsMPaAq_skAGRZE37mJpMrfXHW6DA/viewform?usp=sharing&ouid=116642674041425281083' },
-    { label: 'For Investor', to: 'https://app.arbill.co' },
+    { label: 'For Investor', to: 'https://arbill.vv0lll.com' },
   ],
 };
 
