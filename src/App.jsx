@@ -7,6 +7,7 @@ import About from './pages/About.jsx';
 import HowItWorks from './pages/HowItWorks.jsx';
 import Contact from './pages/Contact.jsx';
 import Terms from './pages/Terms.jsx';
+import Privacy from './pages/Privacy.jsx';
 import { navigationItems } from './content.js';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
           </Routes>
         </Box>
         <Footer />

@@ -5,9 +5,9 @@ import logo from '../assets/images/logo-full.png';
 const footerLinks = {
   Product: [
     { label: 'Platform overview', link: '#' },
-    { label: 'Mobile app', link: '#' },
-    { label: 'Analytics', link: '#' },
-    { label: 'Terms & Conditions', link: '/terms' }
+    { label: 'Mobile app', link: '#' },    
+    { label: 'Terms & Conditions', link: '/terms' },
+    { label: 'Privacy Policy', link: '/privacy' }
   ],
   Company: [
     { label: 'About', link: '#' },
