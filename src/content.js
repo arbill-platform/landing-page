@@ -9,9 +9,7 @@ export const navigationItems = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
   { label: 'How It Works', path: '/how-it-works' },
-  { label: 'Contact', path: '/contact' },
-  { label: 'Terms', path: '/terms' },
-  { label: 'Privacy', path: '/privacy' },
+  { label: 'Contact', path: '/contact' }  
 ];
 
 export const homeHero = {
