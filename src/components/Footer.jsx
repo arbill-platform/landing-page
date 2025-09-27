@@ -1,10 +1,26 @@
 import { Box, Container, Grid, Link, Stack, Typography } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 import logo from '../assets/images/logo-full.png';
 
 const footerLinks = {
-  Product: ['Platform overview', 'Mobile app', 'Analytics', 'Compliance'],
-  Company: ['About', 'Careers', 'Partners', 'News'],
-  Resources: ['Guides', 'Investment Academy', 'Events', 'Support'],
+  Product: [
+    { label: 'Platform overview', link: '#' },
+    { label: 'Mobile app', link: '#' },
+    { label: 'Analytics', link: '#' },
+    { label: 'Terms & Conditions', link: '/terms' }
+  ],
+  Company: [
+    { label: 'About', link: '#' },
+    { label: 'Careers', link: '#' },
+    { label: 'Partners', link: '#' },
+    { label: 'News', link: '#' }
+  ],
+  Resources: [
+    { label: 'Guides', link: '#' },
+    { label: 'Investment Academy', link: '#' },
+    { label: 'Events', link: '#' },
+    { label: 'Support', link: '#' }
+  ],
 };
 
 function Footer() {
@@ -15,7 +31,7 @@ function Footer() {
           <Grid item xs={12} md={4}>
             <Stack spacing={2}>
               <Box component="img" src={logo} alt="Arbill Logo" sx={{ maxWidth: 200 }} />
-              
+
               <Typography variant="body2" sx={{ color: 'grey.400' }}>
                 Building Prestige Through Responsible Investment.
               </Typography>
@@ -33,13 +49,17 @@ function Footer() {
                       {section}
                     </Typography>
                     <Stack spacing={1.5}>
-                      {links.map((label) => (
+                      {links.map(({ label, link }) => (
                         <Link
                           key={label}
-                          underline="hover"
-                          color="inherit"
-                          href="#"
-                          sx={{ color: 'grey.400' }}
+                          component={RouterLink}
+                          to={link}
+                          underline="none"
+                          sx={{
+                            color: 'grey.400',
+                            '&:hover': { color: 'primary.main' },
+                            transition: 'color 0.3s',
+                          }}
                         >
                           {label}
                         </Link>
