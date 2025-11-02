@@ -4,6 +4,8 @@
 - Always discuss the purpose and goals of the agent with the user before proceeding.
 - Always apply best practices for security and privacy.
 - Ensure that the agent's actions align with the user's intentions and ethical standards.
+- Always versioning the agent's code and configurations for traceability.
+- Regularly review and update the agent's capabilities to adapt to changing requirements.
 
 ## Development Instructions
 - Use modular code structure for easy maintenance and updates.
