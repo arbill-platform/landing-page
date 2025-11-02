@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import { Box, Button, Container, Grid, Paper, Stack, TextField, Typography, Alert } from '@mui/material';
+import { Box, Button, Container, Paper, Stack, TextField, Typography, Alert } from '@mui/material';
 
 function ContactFormSection({ form }) {
   const [formData, setFormData] = useState({
@@ -95,17 +95,17 @@ function ContactFormSection({ form }) {
             >
               {submitStatus === 'success' && (
                 <Alert severity="success" sx={{ mb: 2.5 }}>
-                  Thank you! Your message has been sent successfully.
+                  {form.successMessage}
                 </Alert>
               )}
               {submitStatus === 'error' && (
                 <Alert severity="error" sx={{ mb: 2.5 }}>
-                  Something went wrong. Please try again.
+                  {form.errorMessage}
                 </Alert>
               )}
               <Stack component="form" spacing={2.5} onSubmit={handleSubmit}>
                 <TextField 
-                  label="Name" 
+                  label={form.fields.name}
                   fullWidth 
                   required 
                   value={formData.name}
@@ -113,7 +113,7 @@ function ContactFormSection({ form }) {
                   disabled={isSubmitting}
                 />
                 <TextField 
-                  label="Email" 
+                  label={form.fields.email}
                   type="email" 
                   fullWidth 
                   required 
@@ -122,7 +122,7 @@ function ContactFormSection({ form }) {
                   disabled={isSubmitting}
                 />
                 <TextField 
-                  label="Subject" 
+                  label={form.fields.subject}
                   fullWidth 
                   required
                   value={formData.subject}
@@ -130,7 +130,7 @@ function ContactFormSection({ form }) {
                   disabled={isSubmitting}
                 />
                 <TextField 
-                  label="Message" 
+                  label={form.fields.message}
                   multiline 
                   minRows={4} 
                   fullWidth 
@@ -145,7 +145,7 @@ function ContactFormSection({ form }) {
                   size="large"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? 'Submitting...' : 'Submit request'}
+                  {isSubmitting ? form.submittingLabel : form.submitLabel}
                 </Button>
               </Stack>
             </Paper>
@@ -159,6 +159,16 @@ ContactFormSection.propTypes = {
   form: PropTypes.shape({
     heading: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    fields: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired,
+      subject: PropTypes.string.isRequired,
+      message: PropTypes.string.isRequired,
+    }).isRequired,
+    submitLabel: PropTypes.string.isRequired,
+    submittingLabel: PropTypes.string.isRequired,
+    successMessage: PropTypes.string.isRequired,
+    errorMessage: PropTypes.string.isRequired,
   }).isRequired,
 };
 

@@ -10,13 +10,13 @@ import Terms from './pages/Terms.jsx';
 import Privacy from './pages/Privacy.jsx';
 import AssuranceFund from './pages/AssuranceFund.jsx';
 import CurePeriod from './pages/CurePeriod.jsx';
-import { navigationItems } from './content.js';
+import { navigationItems, navbarContent, footerContent } from './content.js';
 
 function App() {
   return (
     <BrowserRouter>
       <Box minHeight="100vh" display="flex" flexDirection="column">
-        <Navbar items={navigationItems} />
+        <Navbar items={navigationItems} content={navbarContent} />
         <Box component="main" sx={{ flexGrow: 1 }}>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -29,7 +29,7 @@ function App() {
             <Route path="/resources/terms/cure-period.html" element={<CurePeriod />} />
           </Routes>
         </Box>
-        <Footer />
+        <Footer content={footerContent} />
       </Box>
     </BrowserRouter>
   );

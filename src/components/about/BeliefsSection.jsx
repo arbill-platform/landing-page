@@ -19,12 +19,14 @@ const iconMap = {
 };
 
 function BeliefsSection({ beliefs }) {
+  const { heading, items } = beliefs;
+
   return (
     <Box component="section" sx={{ py: { xs: 10, md: 14 }, bgcolor: 'background.paper' }}>
       <Container maxWidth="lg">
         <Stack spacing={3} textAlign="center" sx={{ mb: 6 }}>
           <Typography variant="overline" sx={{ letterSpacing: 3, color: 'primary.main' }}>
-            Our Belief
+            {heading}
           </Typography>          
         </Stack>
         <Box
@@ -34,7 +36,7 @@ function BeliefsSection({ beliefs }) {
             gridTemplateColumns: { xs: '1fr', md: 'repeat(2, minmax(0, 1fr))' },
           }}
         >
-          {beliefs.map(({ title, description, icon }) => {
+          {items.map(({ title, description, icon }) => {
             const IconComponent = iconMap[icon];
             return (
               <Card
@@ -77,13 +79,16 @@ function BeliefsSection({ beliefs }) {
 }
 
 BeliefsSection.propTypes = {
-  beliefs: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      icon: PropTypes.oneOf(['Lightbulb', 'FactCheck', 'Diversity3', 'VolunteerActivism']).isRequired,
-    }),
-  ).isRequired,
+  beliefs: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        icon: PropTypes.string.isRequired,
+      }),
+    ).isRequired,
+  }).isRequired,
 };
 
 export default BeliefsSection;

@@ -23,7 +23,7 @@ function CommunitySection({ community }) {
     e.preventDefault();
     
     if (!email) {
-      setError('Email is required');
+      setError(community.newsletter.requiredMessage);
       return;
     }
 
@@ -47,7 +47,7 @@ function CommunitySection({ community }) {
       // Reset success message after 3 seconds
       setTimeout(() => setIsSuccess(false), 3000);
     } catch (err) {
-      setError('Failed to subscribe. Please try again.');
+      setError(community.newsletter.errorMessage);
     } finally {
       setIsSubmitting(false);
     }
@@ -111,7 +111,7 @@ function CommunitySection({ community }) {
           onSubmit={submitForm}
         >
           <TextField 
-            label="Work email" 
+            label={community.newsletter.emailLabel}
             type="email" 
             required 
             value={email}
@@ -126,7 +126,7 @@ function CommunitySection({ community }) {
             disabled={isSubmitting}
             startIcon={isSubmitting ? <CircularProgress size={20} /> : null}
           >
-            {isSubmitting ? 'Subscribing...' : 'Subscribe to newsletter'}
+            {isSubmitting ? community.newsletter.submittingLabel : community.newsletter.submitLabel}
           </Button>
         </Stack>
         
@@ -135,7 +135,7 @@ function CommunitySection({ community }) {
           <Stack alignItems="center" sx={{ mt: 2 }}>
             {isSuccess && (
               <Alert severity="success" sx={{ maxWidth: 400 }}>
-                Successfully subscribed to our newsletter!
+                {community.newsletter.successMessage}
               </Alert>
             )}
             {error && (
@@ -161,6 +161,14 @@ CommunitySection.propTypes = {
         link: PropTypes.string.isRequired,
       }),
     ).isRequired,
+    newsletter: PropTypes.shape({
+      emailLabel: PropTypes.string.isRequired,
+      submitLabel: PropTypes.string.isRequired,
+      submittingLabel: PropTypes.string.isRequired,
+      successMessage: PropTypes.string.isRequired,
+      errorMessage: PropTypes.string.isRequired,
+      requiredMessage: PropTypes.string.isRequired,
+    }).isRequired,
   }).isRequired,
 };
 

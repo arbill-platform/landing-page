@@ -7,9 +7,9 @@ function HomeHowItWorks({ content }) {
       <Container maxWidth="lg">
         <Stack spacing={3} textAlign="center" sx={{ mb: 6 }}>
           <Typography variant="overline" sx={{ letterSpacing: 3, color: 'primary.main' }}>
-            How Arbill works
+            {content.heading}
           </Typography>
-          <Typography variant="h3">{content.tagline}</Typography>
+          {content.tagline && <Typography variant="h3">{content.tagline}</Typography>}
         </Stack>
         <Box
           sx={{
@@ -64,7 +64,8 @@ function HomeHowItWorks({ content }) {
 }
 
 HomeHowItWorks.propTypes = {
-  content: PropTypes.shape({    
+  content: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
     tagline: PropTypes.string.isRequired,
     steps: PropTypes.arrayOf(
       PropTypes.shape({

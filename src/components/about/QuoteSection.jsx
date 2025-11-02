@@ -7,7 +7,7 @@ function QuoteSection({ quote }) {
       <Container maxWidth="md">
       <Stack spacing={3} textAlign="center" sx={{ mb: 6 }}>
           <Typography variant="overline" sx={{ letterSpacing: 3, color: 'primary.main' }}>
-            Our Promise
+            {quote.heading}
           </Typography>          
         </Stack>
         <Paper
@@ -42,6 +42,7 @@ function QuoteSection({ quote }) {
 
 QuoteSection.propTypes = {
   quote: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     role: PropTypes.string.isRequired,

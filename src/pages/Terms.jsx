@@ -1,5 +1,5 @@
 import { Box, Container, Stack, Typography } from '@mui/material';
-import { termsContent } from '../content.js';
+import { legalBadge, termsContent } from '../content.js';
 
 const renderParagraphs = (items = [], { keyPrefix, variant = 'body1' }) =>
   items.map((text, index) => (
@@ -26,10 +26,10 @@ function Terms() {
     <Box component="section" sx={{ py: { xs: 8, md: 12 }, bgcolor: 'background.default' }}>
       <Container maxWidth="md">
         <Stack spacing={{ xs: 6, md: 8 }}>
-          <Stack spacing={2}>
-            <Typography variant="overline" sx={{ letterSpacing: 4, color: 'primary.main' }}>
-              Legal
-            </Typography>
+        <Stack spacing={2}>
+          <Typography variant="overline" sx={{ letterSpacing: 4, color: 'primary.main' }}>
+            {legalBadge}
+          </Typography>
             <Typography variant="h3" component="h1">
               {hero.title}
             </Typography>

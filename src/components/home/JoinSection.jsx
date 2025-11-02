@@ -31,18 +31,15 @@ function AudienceCard({ title, description, highlights, cta }) {
             </ListItem>
           ))}
         </List>
-        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
-          
+        {cta && (
+          <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
             <Button
               key={cta.label}
-              // component={RouterLink}
-              to={cta.to}
-              // variant={index === 0 ? 'contained' : 'outlined'}
-              // color="inherit"
+              component="a"
+              href={cta.to}
               size="large"
               sx={{
                 bgcolor: 'primary.main',
-                
                 color: 'common.white',
                 '&:hover': {
                   bgcolor: 'primary.dark',
@@ -51,8 +48,8 @@ function AudienceCard({ title, description, highlights, cta }) {
             >
               {cta.label}
             </Button>
-            
           </Stack>
+        )}
       </Stack>
     </Paper>
   );
@@ -62,6 +59,10 @@ AudienceCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   highlights: PropTypes.arrayOf(PropTypes.string).isRequired,
+  cta: PropTypes.shape({
+    label: PropTypes.string.isRequired,
+    to: PropTypes.string.isRequired,
+  }),
 };
 
 function JoinSection({ content }) {
@@ -70,7 +71,7 @@ function JoinSection({ content }) {
       <Container maxWidth="lg">
         <Stack spacing={3} textAlign="center" sx={{ mb: 6 }}>
           <Typography variant="overline" sx={{ letterSpacing: 3, color: 'primary.main' }}>
-            Who can join
+            {content.heading}
           </Typography>
           <Typography variant="h3">{content.tagline}</Typography>
         </Stack>
@@ -91,6 +92,7 @@ function JoinSection({ content }) {
 
 JoinSection.propTypes = {
   content: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
     tagline: PropTypes.string.isRequired,
     owner: PropTypes.shape({
       title: PropTypes.string.isRequired,

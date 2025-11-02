@@ -16,9 +16,11 @@ function CommitmentSection({ content }) {
       <Container maxWidth="lg">
         <Stack spacing={3} textAlign="center" sx={{ mb: 6 }}>
           <Typography variant="overline" sx={{ letterSpacing: 3, color: 'primary.main' }}>
-            Our commitment
+            {content.heading}
           </Typography>
-          <Typography variant="h3">{content.tagline}</Typography>
+          {content.tagline && (
+            <Typography variant="h3">{content.tagline}</Typography>
+          )}
         </Stack>
         <Box
           sx={{
@@ -62,6 +64,7 @@ function CommitmentSection({ content }) {
 CommitmentSection.propTypes = {
   content: PropTypes.shape({
     heading: PropTypes.string.isRequired,
+    tagline: PropTypes.string,
     values: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string.isRequired,

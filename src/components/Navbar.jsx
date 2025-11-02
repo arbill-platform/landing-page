@@ -21,7 +21,7 @@ import mainLogo from '../assets/images/logo-full.png';
 
 const drawerWidth = 320;
 
-function Navbar({ items }) {
+function Navbar({ items, content }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
 
@@ -68,7 +68,7 @@ function Navbar({ items }) {
             <Box
               component="img"
               src={mainLogo}
-              alt="Arbill Logo"
+              alt={`${content.brand} Logo`}
               sx={{
                 height: 40,
                 width: 'auto',
@@ -88,11 +88,11 @@ function Navbar({ items }) {
             <Button
               variant="text"
               color="inherit"
-              component={RouterLink}
-              to="https://arbill.vv0lll.com/login"
-              sx={ 'text.primary' }
+              component="a"
+              href={content.loginUrl}
+              sx={{ color: 'text.primary' }}
             >
-              Log in
+              {content.login}
             </Button>            
           </Stack>
 
@@ -101,7 +101,7 @@ function Navbar({ items }) {
             edge="end"
             onClick={toggleDrawer}
             sx={{ display: { xs: 'inline-flex', md: 'none' } }}
-            aria-label="Toggle navigation menu"
+            aria-label={content.toggleAriaLabel}
           >
             {mobileOpen ? <CloseIcon /> : <MenuIcon />}
           </IconButton>
@@ -124,9 +124,9 @@ function Navbar({ items }) {
         <Stack spacing={3} sx={{ flex: 1 }}>
           <Stack spacing={0.5}>
             <Typography variant="subtitle2" sx={{ letterSpacing: 3, color: 'text.secondary' }}>
-              ARBILL
+              {content.brand}
             </Typography>
-            <Typography variant="h5">Prestige Investment Platform</Typography>
+            <Typography variant="h5">{content.drawerTagline}</Typography>
           </Stack>
           <Divider />
           <List sx={{ flex: 1 }}>
@@ -152,12 +152,12 @@ function Navbar({ items }) {
             <Button
               variant="text"
               color="inherit"
-              component={RouterLink}
-              to="https://arbill.vv0lll.com/login"
+              component="a"
+              href={content.loginUrl}
               onClick={closeDrawer}
-              sx={{ color: isActive('/contact') ? 'primary.main' : 'text.primary' }}
+              sx={{ color: 'text.primary' }}
             >
-              Log in
+              {content.login}
             </Button>
           </Stack>
         </Stack>
@@ -173,6 +173,13 @@ Navbar.propTypes = {
       path: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  content: PropTypes.shape({
+    brand: PropTypes.string.isRequired,
+    drawerTagline: PropTypes.string.isRequired,
+    login: PropTypes.string.isRequired,
+    loginUrl: PropTypes.string.isRequired,
+    toggleAriaLabel: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Navbar;

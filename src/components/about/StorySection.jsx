@@ -9,7 +9,7 @@ function StorySection({ story }) {
       <Container maxWidth="lg">
         <Stack spacing={3} textAlign="center" sx={{ mb: 6 }}>
           <Typography variant="overline" sx={{ letterSpacing: 3, color: 'primary.main' }}>
-            Our Story
+            {story.heading}
           </Typography>
           
         </Stack>

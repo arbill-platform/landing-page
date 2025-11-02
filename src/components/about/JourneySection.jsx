@@ -8,19 +8,21 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 
 function JourneySection({ journey }) {
+  const { heading, items } = journey;
+
   return (
     <Box component="section" sx={{ py: { xs: 10, md: 14 } }}>
       <Container maxWidth="md">
         <Stack spacing={3} textAlign="center" sx={{ mb: 6 }}>
           <Typography variant="overline" sx={{ letterSpacing: 3, color: 'primary.main' }}>
-            Our Journey
+            {heading}
           </Typography>          
         </Stack>
         <Stack spacing={4}>          
           <Stack spacing={4}>
             <Timeline position="alternate-reverse">                      
-              {journey.map(({ year, milestone }, index) => (
-                <TimelineItem>
+              {items.map(({ year, milestone }) => (
+                <TimelineItem key={year}>
                   <TimelineSeparator>
                     <TimelineDot />
                     <TimelineConnector />
@@ -48,12 +50,15 @@ function JourneySection({ journey }) {
 }
 
 JourneySection.propTypes = {
-  journey: PropTypes.arrayOf(
-    PropTypes.shape({
-      year: PropTypes.string.isRequired,
-      milestone: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
+  journey: PropTypes.shape({
+    heading: PropTypes.string.isRequired,
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        year: PropTypes.string.isRequired,
+        milestone: PropTypes.string.isRequired,
+      }),
+    ).isRequired,
+  }).isRequired,
 };
 
 export default JourneySection;
