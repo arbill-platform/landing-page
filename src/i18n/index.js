@@ -1,11 +1,21 @@
 import en from './locales/en.js';
+import es from './locales/es.js';
+import it from './locales/it.js';
+import ru from './locales/ru.js';
+import vi from './locales/vi.js';
+import zh from './locales/zh.js';
 
 export const DEFAULT_LOCALE = 'en';
 
-export const SUPPORTED_LOCALES = [DEFAULT_LOCALE];
+export const SUPPORTED_LOCALES = [DEFAULT_LOCALE, 'es', 'it', 'ru','vi', 'zh'];
 
 const MESSAGES = {
   en,
+  es,
+  it,
+  ru,
+  vi,
+  zh,
 };
 
 export function getMessages(locale = DEFAULT_LOCALE) {
@@ -56,4 +66,3 @@ export function registerLocale(locale, messages) {
     SUPPORTED_LOCALES.push(normalizedLocale);
   }
 }
-

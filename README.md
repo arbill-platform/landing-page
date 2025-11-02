@@ -60,7 +60,7 @@ The landing page copy is centralized under `src/i18n/`:
 - `src/i18n/index.js` exposes helpers for resolving the active locale and registering additional languages.
 - `src/content.js` reads the locale messages and merges them with non-translatable data (images, URLs) before passing copy to components.
 
-`LocaleProvider` (`src/i18n/LocaleProvider.jsx`) initializes the locale in this order: `?lang=` query param → stored preference in `localStorage` → browser language (`navigator.languages`). A language selector in the navbar lets visitors override the detected setting and persists their choice.
+`LocaleProvider` (`src/i18n/LocaleProvider.jsx`) initializes the locale in this order: `?lang=` query param → stored preference in `localStorage` → browser language (`navigator.languages`). The navbar language switcher now offers English, Vietnamese, Chinese, Russian, Italian, and Spanish, and the visitor’s choice is persisted.
 
 To add a new locale:
 

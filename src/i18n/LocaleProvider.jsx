@@ -16,6 +16,11 @@ const QUERY_PARAM = 'lang';
 
 const DEFAULT_LOCALE_LABELS = {
   en: 'English',
+  es: 'Español',
+  it: 'Italiano',
+  ru: 'Русский',
+  vi: 'Tiếng Việt',
+  zh: '中文',
 };
 
 const getLocaleLabel = (locale) => DEFAULT_LOCALE_LABELS[locale] ?? locale.toUpperCase();
