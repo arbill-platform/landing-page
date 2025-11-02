@@ -1,8 +1,9 @@
 import { Box, Container, Stack, Typography } from '@mui/material';
-import { resourcesContent } from '../content.js';
+import { useLocaleContent } from '../i18n/LocaleProvider.jsx';
 
 function AssuranceFund() {
-  const { badge, assuranceFund } = resourcesContent;
+  const { resources } = useLocaleContent();
+  const { badge, assuranceFund } = resources;
 
   return (
     <Box component="section" sx={{ py: { xs: 8, md: 12 }, bgcolor: 'background.default' }}>

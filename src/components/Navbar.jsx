@@ -8,9 +8,12 @@ import {
   Container,
   Divider,
   Drawer,
+  FormControl,
   IconButton,
   List,
   ListItem,
+  MenuItem,
+  Select,
   Stack,
   Toolbar,
   Typography,
@@ -21,7 +24,7 @@ import mainLogo from '../assets/images/logo-full.png';
 
 const drawerWidth = 320;
 
-function Navbar({ items, content }) {
+function Navbar({ items, content, locale, supportedLocales, localeLabels, onLocaleChange }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
 
@@ -55,6 +58,35 @@ function Navbar({ items, content }) {
     </Button>
   );
 
+  const renderLocaleSelector = (variant) => {
+    if (!supportedLocales || supportedLocales.length === 0) {
+      return null;
+    }
+
+    const handleChange = (event) => {
+      onLocaleChange?.(event.target.value);
+    };
+
+    return (
+      <FormControl size="small" variant={variant ?? 'outlined'} sx={{ minWidth: 110 }}>
+        <Select
+          value={locale}
+          onChange={handleChange}
+          sx={{
+            color: variant === 'standard' ? 'inherit' : 'text.primary',
+            '& .MuiSelect-icon': { color: 'inherit' },
+          }}
+        >
+          {supportedLocales.map((code) => (
+            <MenuItem key={code} value={code}>
+              {localeLabels[code] ?? code.toUpperCase()}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
+    );
+  };
+
   return (
     <AppBar
       position="sticky"
@@ -84,7 +116,7 @@ function Navbar({ items, content }) {
             {items.map((item) => renderNavButton(item))}
           </Stack>
 
-          <Stack direction="row" spacing={1.5} sx={{ display: { xs: 'none', md: 'flex' } }}>
+          <Stack direction="row" spacing={1.5} sx={{ display: { xs: 'none', md: 'flex' }, alignItems: 'center' }}>
             <Button
               variant="text"
               color="inherit"
@@ -94,6 +126,7 @@ function Navbar({ items, content }) {
             >
               {content.login}
             </Button>            
+            {renderLocaleSelector()}
           </Stack>
 
           <IconButton
@@ -159,6 +192,7 @@ function Navbar({ items, content }) {
             >
               {content.login}
             </Button>
+            {renderLocaleSelector('filled')}
           </Stack>
         </Stack>
       </Drawer>
@@ -180,6 +214,10 @@ Navbar.propTypes = {
     loginUrl: PropTypes.string.isRequired,
     toggleAriaLabel: PropTypes.string.isRequired,
   }).isRequired,
+  locale: PropTypes.string.isRequired,
+  supportedLocales: PropTypes.arrayOf(PropTypes.string).isRequired,
+  localeLabels: PropTypes.objectOf(PropTypes.string).isRequired,
+  onLocaleChange: PropTypes.func.isRequired,
 };
 
 export default Navbar;

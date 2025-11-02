@@ -60,6 +60,8 @@ The landing page copy is centralized under `src/i18n/`:
 - `src/i18n/index.js` exposes helpers for resolving the active locale and registering additional languages.
 - `src/content.js` reads the locale messages and merges them with non-translatable data (images, URLs) before passing copy to components.
 
+`LocaleProvider` (`src/i18n/LocaleProvider.jsx`) initializes the locale in this order: `?lang=` query param → stored preference in `localStorage` → browser language (`navigator.languages`). A language selector in the navbar lets visitors override the detected setting and persists their choice.
+
 To add a new locale:
 
 1. Duplicate `src/i18n/locales/en.js`, translate the string values, and export it from `src/i18n/index.js` via `registerLocale`.

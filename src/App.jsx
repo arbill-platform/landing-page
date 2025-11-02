@@ -10,13 +10,23 @@ import Terms from './pages/Terms.jsx';
 import Privacy from './pages/Privacy.jsx';
 import AssuranceFund from './pages/AssuranceFund.jsx';
 import CurePeriod from './pages/CurePeriod.jsx';
-import { navigationItems, navbarContent, footerContent } from './content.js';
+import { LocaleProvider, useLocale, useLocaleContent } from './i18n/LocaleProvider.jsx';
 
-function App() {
+function AppShell() {
+  const content = useLocaleContent();
+  const { locale, setLocale, supportedLocales, localeLabels } = useLocale();
+
   return (
     <BrowserRouter>
       <Box minHeight="100vh" display="flex" flexDirection="column">
-        <Navbar items={navigationItems} content={navbarContent} />
+        <Navbar
+          items={content.navigationItems}
+          content={content.navbar}
+          locale={locale}
+          supportedLocales={supportedLocales}
+          localeLabels={localeLabels}
+          onLocaleChange={setLocale}
+        />
         <Box component="main" sx={{ flexGrow: 1 }}>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -29,9 +39,17 @@ function App() {
             <Route path="/resources/terms/cure-period.html" element={<CurePeriod />} />
           </Routes>
         </Box>
-        <Footer content={footerContent} />
+        <Footer content={content.footer} />
       </Box>
     </BrowserRouter>
+  );
+}
+
+function App() {
+  return (
+    <LocaleProvider>
+      <AppShell />
+    </LocaleProvider>
   );
 }
 

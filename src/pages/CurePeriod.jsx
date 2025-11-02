@@ -1,8 +1,9 @@
 import { Box, Container, Stack, Typography } from '@mui/material';
-import { resourcesContent } from '../content.js';
+import { useLocaleContent } from '../i18n/LocaleProvider.jsx';
 
 function CurePeriod() {
-  const { badge, curePeriod } = resourcesContent;
+  const { resources } = useLocaleContent();
+  const { badge, curePeriod } = resources;
   const introParagraphs = curePeriod.whatParagraphs.slice(0, 2);
   const immediateLead = curePeriod.whatParagraphs[2];
 

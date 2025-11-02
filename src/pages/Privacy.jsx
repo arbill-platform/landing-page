@@ -1,5 +1,5 @@
 import { Box, Container, Stack, Typography } from '@mui/material';
-import { legalBadge, privacyContent } from '../content.js';
+import { useLocaleContent } from '../i18n/LocaleProvider.jsx';
 
 const renderParagraphs = (items = [], { keyPrefix, variant = 'body1' }) =>
   items.map((text, index) => (
@@ -20,7 +20,8 @@ const renderList = (items = [], keyPrefix) =>
   ) : null;
 
 function Privacy() {
-  const { hero, sections } = privacyContent;
+  const { privacy, legalBadge } = useLocaleContent();
+  const { hero, sections } = privacy;
 
   return (
     <Box component="section" sx={{ py: { xs: 8, md: 12 }, bgcolor: 'background.default' }}>

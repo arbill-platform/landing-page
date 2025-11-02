@@ -4,24 +4,19 @@ import HomeHowItWorks from '../components/home/HomeHowItWorks.jsx';
 import JoinSection from '../components/home/JoinSection.jsx';
 import CommitmentSection from '../components/home/CommitmentSection.jsx';
 import SpotlightSection from '../components/home/SpotlightSection.jsx';
-import {
-  homeHero,
-  whoWeAreContent,
-  homeHowItWorkSteps,
-  joinAudienceContent,
-  commitmentContent,
-  spotlightContent,
-} from '../content.js';
+import { useLocaleContent } from '../i18n/LocaleProvider.jsx';
 
 function Home() {
+  const { home } = useLocaleContent();
+
   return (
     <>
-      <HeroBanner hero={homeHero} />
-      <WhoWeAreSection content={whoWeAreContent} />      
-      <HomeHowItWorks content={homeHowItWorkSteps} />
-      <JoinSection content={joinAudienceContent} />
-      <CommitmentSection content={commitmentContent} />
-      <SpotlightSection content={spotlightContent} />
+      <HeroBanner hero={home.hero} />
+      <WhoWeAreSection content={home.whoWeAre} />
+      <HomeHowItWorks content={home.howItWorks} />
+      <JoinSection content={home.join} />
+      <CommitmentSection content={home.commitment} />
+      <SpotlightSection content={home.spotlight} />
     </>
   );
 }
