@@ -11,6 +11,7 @@ import Privacy from './pages/Privacy.jsx';
 import AssuranceFund from './pages/AssuranceFund.jsx';
 import CurePeriod from './pages/CurePeriod.jsx';
 import NotFound from './pages/NotFound.jsx';
+import Register from './pages/Register.jsx';
 import { LocaleProvider, useLocale, useLocaleContent } from './i18n/LocaleProvider.jsx';
 
 function AppShell() {
@@ -36,6 +37,7 @@ function AppShell() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
+            <Route path="/register" element={<Register />} />
             <Route path="/resources/terms/assurance-fund.html" element={<AssuranceFund />} />
             <Route path="/resources/terms/cure-period.html" element={<CurePeriod />} />            
             <Route path="*" element={<NotFound />} />
