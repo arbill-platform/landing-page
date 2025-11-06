@@ -10,6 +10,7 @@ import Terms from './pages/Terms.jsx';
 import Privacy from './pages/Privacy.jsx';
 import AssuranceFund from './pages/AssuranceFund.jsx';
 import CurePeriod from './pages/CurePeriod.jsx';
+import NotFound from './pages/NotFound.jsx';
 import { LocaleProvider, useLocale, useLocaleContent } from './i18n/LocaleProvider.jsx';
 
 function AppShell() {
@@ -36,7 +37,8 @@ function AppShell() {
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/resources/terms/assurance-fund.html" element={<AssuranceFund />} />
-            <Route path="/resources/terms/cure-period.html" element={<CurePeriod />} />
+            <Route path="/resources/terms/cure-period.html" element={<CurePeriod />} />            
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Box>
         <Footer content={content.footer} />
