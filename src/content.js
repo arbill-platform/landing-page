@@ -2,7 +2,7 @@ import { heroImage, heroAbout, heroHIW, heroContact, whoAreWe, ourStory } from '
 
 export const links = {
   projectOwnerForm: 'https://forms.gle/vr36TtFpqntvCDrA9',
-  investorLogin: 'https://arbill.vv0lll.com/login',
+  investorLogin: 'https://app.arbill.co/login',
 };
 
 const resolveLink = (linkKeyOrUrl) => {
